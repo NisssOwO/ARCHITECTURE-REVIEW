@@ -1,12 +1,157 @@
+const SUBJECTS = [
+  { id: 'china', name: '中国建筑史', files: 12, color: '#a56842', desc: '中国古代建筑、木构架与建筑群体' },
+  { id: 'foreign', name: '外国建筑史', files: 12, color: '#53758b', desc: '古代文明、古典建筑与历史类型' },
+  { id: 'modern', name: '外国近现代建筑史', files: 12, color: '#866e85', desc: '现代建筑运动、流派与代表作品' },
+  { id: 'public', name: '公共建筑设计原理', files: 7, color: '#75866c', desc: '总体环境、空间组织与设计原则' },
+];
+
+const SUBJECT_ORDER = SUBJECTS.map((s) => s.id);
+
+// 章节标题全部取自 F:\work\fuxi\zl 各篇笔记的一级标题（# 标题），键为「科目 → 文件序号」
 const CHAPTER_TITLES = {
-  '1': '中国古代建筑特征',
-  '2': '古代建筑平面',
-  '12': '木构架与屋面',
-  // ... 其他章节映射
+  china: {
+    '1': '绪论：中国古代建筑的特征',
+    '2': '第1章：古代建筑发展概况',
+    '3': '第1章：古代建筑发展概况（续）',
+    '4': '第2章：城市建设',
+    '5': '第3章：住宅与聚落',
+    '6': '第4章：宫殿、坛庙、陵墓',
+    '7': '第5章：宗教建筑',
+    '8': '第5章：宗教建筑（续）',
+    '9': '第6章：园林与风景建设',
+    '10': '第7章：建筑意匠',
+    '11': '第8-9章：古代木构建筑的特征与详部演变 - 清式建筑做法',
+    '12': '第8-9章：古代木构建筑的特征与详部演变 - 清式建筑做法（续）',
+  },
+  foreign: {
+    '1': '第一篇：古埃及、古代西亚的建筑概述',
+    '2': '第二章 古代西亚的建筑',
+    '3': '第二篇：欧洲古典时代的建筑概述',
+    '4': '第四章 古希腊的建筑',
+    '5': '第五章 古罗马的建筑（上）',
+    '6': '第五章 古罗马的建筑（下）',
+    '7': '第三篇：欧洲中世纪建筑概述 & 第六章 拜占庭的建筑',
+    '8': '第七章 西欧中世纪建筑',
+    '9': '第四篇：欧洲资本主义萌芽和绝对君权时期的建筑概述 & 第八章 意大利文艺复兴建筑（上）',
+    '10': '第八章 意大利文艺复兴建筑（下）',
+    '11': '第九章 意大利巴洛克建筑',
+    '12': '第十章 法国古典主义建筑',
+  },
+  modern: {
+    '1': '第一章：18世纪下半叶~19世纪下半叶欧洲与美国的建筑',
+    '2': '第二章：19世纪下半叶~20世纪初对新建筑的探索',
+    '3': '第二章：19世纪下半叶~20世纪初对新建筑的探索（续）',
+    '4': '第三章：两次世界大战之间的建筑',
+    '5': '第三章：新建筑运动的高潮——现代建筑派与代表人物',
+    '6': '第三章：新建筑运动的高潮——现代建筑派与代表人物（续）',
+    '7': '第五章：战后40～70年代的建筑思潮——现代建筑派的普及与发展',
+    '8': '第五章：战后40～70年代的建筑思潮——现代建筑派的普及与发展（续）',
+    '9': '第六章：现代主义之后的建筑思潮',
+    '10': '第六章：现代主义之后的建筑思潮（续）',
+    '11': '第六章：现代主义之后的建筑思潮（续2）',
+    '12': '第六章：现代主义之后的建筑思潮（续3）',
+  },
+  public: {
+    '1': '第一章 公共建筑的总体环境布局',
+    '2': '第二章 公共建筑的功能关系与空间组合',
+    '3': '第三章 公共建筑的造型艺术问题',
+    '4': '第四章 公共建筑的技术经济问题分析',
+    '5': '第四章 公共建筑的技术经济问题分析（续）',
+    '6': '第五章 公共建筑的空间组合综合分析',
+    '7': '第六章 公共建筑的无障碍设计',
+  },
 };
 
-function getChapterName(chapter) {
-  return CHAPTER_TITLES[chapter] ? `${chapter}. ${CHAPTER_TITLES[chapter]}` : `第${chapter}章`;
+const CN_NUM = { 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6, 七: 7, 八: 8, 九: 9, 十: 10 };
+
+function cnToNumber(text) {
+  if (!text) return NaN;
+  if (/^\d+$/.test(text)) return parseInt(text, 10);
+  if (text === '十') return 10;
+  if (text.startsWith('十')) return 10 + (CN_NUM[text[1]] || 0);
+  if (text.length === 2 && text[1] === '十') return (CN_NUM[text[0]] || 0) * 10;
+  if (text.length === 3 && text[1] === '十') return (CN_NUM[text[0]] || 0) * 10 + (CN_NUM[text[2]] || 0);
+  return CN_NUM[text] || NaN;
+}
+
+// 章节值可能是「12」这种文件序号，也可能是导入笔记的完整标题，统一取出可用于排序的序号
+function chapterOrderValue(chapter) {
+  const raw = String(chapter ?? '').trim();
+  if (!raw) return 9999;
+  if (/^\d+$/.test(raw)) return parseInt(raw, 10);
+  const arabic = raw.match(/第\s*(\d+)\s*[章篇讲]/);
+  if (arabic) return parseInt(arabic[1], 10);
+  const chinese = raw.match(/第\s*([一二三四五六七八九十]+)\s*[章篇讲]/);
+  if (chinese) {
+    const n = cnToNumber(chinese[1]);
+    if (!Number.isNaN(n)) return n;
+  }
+  return 9998;
+}
+
+function subjectOrderIndex(id) {
+  const idx = SUBJECT_ORDER.indexOf(id);
+  return idx === -1 ? 99 : idx;
+}
+
+// 章节键：单一科目下直接用章序号，全部科目时用「科目|序号」避免不同科目串章
+function chapterKeyOf(card, subjectFilter) {
+  if (!card) return 'all';
+  return subjectFilter === 'all' ? `${card.subject}|${card.chapter}` : String(card.chapter);
+}
+
+function splitChapterKey(key) {
+  const raw = String(key ?? '');
+  if (raw.includes('|')) {
+    const [subject, ...rest] = raw.split('|');
+    return { subject, chapter: rest.join('|') };
+  }
+  return { subject: null, chapter: raw };
+}
+
+function getChapterName(chapter, subject) {
+  if (!chapter || chapter === 'all') return '全部章节';
+  const { subject: keyed, chapter: rawChapter } = splitChapterKey(chapter);
+  let subjectId = keyed || (subject && subject !== 'all' ? subject : null);
+  let title = subjectId ? (CHAPTER_TITLES[subjectId] || {})[rawChapter] : null;
+
+  if (!title && !keyed) {
+    // 科目未知时在所有科目里找同名章节
+    for (const s of SUBJECTS) {
+      const hit = CHAPTER_TITLES[s.id][rawChapter];
+      if (hit) { title = hit; subjectId = s.id; break; }
+    }
+  }
+
+  const prefix = subject === 'all' && subjectId ? `${subjectName(subjectId)} · ` : '';
+  if (title) return `${prefix}${title}`;
+  if (/^\d+$/.test(rawChapter)) return `${prefix}第${rawChapter}章`;
+  return `${prefix}${rawChapter}`;
+}
+
+// 卡片自身章节的完整显示名（含章序号兜底）
+function chapterDisplay(card) {
+  if (!card) return '未归类章节';
+  return getChapterName(card.chapter, card.subject);
+}
+
+function matchesChapter(card, key) {
+  if (!key || key === 'all') return true;
+  if (String(key).includes('|')) return `${card.subject}|${card.chapter}` === String(key);
+  return String(card.chapter) === String(key);
+}
+
+function sortDeck(list) {
+  return list
+    .map((card, index) => ({ card, index }))
+    .sort((a, b) => {
+      const bySubject = subjectOrderIndex(a.card.subject) - subjectOrderIndex(b.card.subject);
+      if (bySubject) return bySubject;
+      const byChapter = chapterOrderValue(a.card.chapter) - chapterOrderValue(b.card.chapter);
+      if (byChapter) return byChapter;
+      return a.index - b.index;
+    })
+    .map((item) => item.card);
 }
 
 const SAMPLE_CARDS = [
@@ -9042,18 +9187,14 @@ function formatTime(isoStr) {
 // ---------------- 视图 2: 资料浏览 Materials ----------------
 function materials() {
   const all = allCards();
-  const chapters = [...new Set(all
-    .filter((k) => state.subject === 'all' || k.subject === state.subject)
-    .map((k) => k.chapter)
-    .filter(Boolean)
-  )];
+  const chapters = getChapters(state.subject);
 
   const searchKeyword = (state.search || '').trim().toLowerCase();
   const list = all.filter((k) => {
     if (state.subject !== 'all' && k.subject !== state.subject) return false;
-    if (state.chapter !== 'all' && k.chapter !== state.chapter) return false;
+    if (!matchesChapter(k, state.chapter)) return false;
     if (searchKeyword) {
-      const match = `${k.title} ${k.body} ${k.chapter} ${k.tag || ''}`.toLowerCase();
+      const match = `${k.title} ${k.body} ${k.chapter} ${getChapterName(k.chapter, k.subject)} ${k.tag || ''}`.toLowerCase();
       if (!match.includes(searchKeyword)) return false;
     }
     return true;
@@ -9083,7 +9224,7 @@ function materials() {
     <div class="filter-row">
       <select class="filter" onchange="setChapter(this.value)">
         <option value="all">全部章节 (${chapters.length} 个章节)</option>
-        ${chapters.map((c) => `<option value="${escapeAttr(c)}" ${state.chapter === c ? 'selected' : ''}>${escapeHtml(c)}</option>`).join('')}
+        ${chapterOptionsHTML(state.chapter, state.subject)}
       </select>
       ${searchKeyword ? `<span class="tag" style="margin-left:auto;">搜索词：“${escapeHtml(state.search)}” · 找到 ${list.length} 条</span>` : ''}
     </div>
@@ -9105,7 +9246,7 @@ function materialRowHTML(k) {
       <div style="flex:1;min-width:0;">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
           <span class="tag ${k.level === 'high' ? 'accent' : ''}">${k.level === 'high' ? '重点考点' : '基础知识'}</span>
-          <small style="color:var(--muted)">${escapeHtml(subjectName(k.subject))} · ${escapeHtml(k.chapter)}</small>
+          <small style="color:var(--muted)">${escapeHtml(subjectName(k.subject))} · ${escapeHtml(chapterDisplay(k))}</small>
         </div>
         <h3 style="margin:0 0 8px 0;font-size:16px;">${escapeHtml(k.title)}</h3>
         <p class="material-body-preview" style="color:var(--body);line-height:1.6;font-size:14px;margin:0 0 8px 0;">${formatBody(k.body)}</p>
@@ -9128,18 +9269,14 @@ function cardRangeCards() {
   }
   if (state.cardFilter === 'favorite') deck = deck.filter((c) => state.favorites.includes(c.id));
   if (state.rangeSubject !== 'all') deck = deck.filter((c) => c.subject === state.rangeSubject);
-  if (state.rangeChapter !== 'all') deck = deck.filter((c) => c.chapter === state.rangeChapter);
-  return deck;
+  if (state.rangeChapter !== 'all') deck = deck.filter((c) => matchesChapter(c, state.rangeChapter));
+  return sortDeck(deck);
 }
 
 function cardsV2() {
   const all = allCards();
   const subjects = [...new Set(all.map((c) => c.subject))];
-  const chapters = [...new Set(all
-    .filter((c) => state.rangeSubject === 'all' || c.subject === state.rangeSubject)
-    .map((c) => c.chapter)
-    .filter(Boolean)
-  )];
+  const chapters = getChapters(state.rangeSubject);
 
   const deck = cardRangeCards();
 
@@ -9231,8 +9368,8 @@ function cardsV2() {
           ${subjects.map((s) => `<option value="${escapeAttr(s)}" ${state.rangeSubject === s ? 'selected' : ''}>${escapeHtml(subjectName(s))}</option>`).join('')}
         </select>
         <select class="filter" onchange="setRange('chapter', this.value)">
-          <option value="all">全部章节 (${chapters.length})</option>
-          ${chapters.map((c) => `<option value="${escapeAttr(c)}" ${state.rangeChapter === c ? 'selected' : ''}>${escapeHtml(getChapterName(c))}</option>`).join('')}
+          <option value="all">全部章节</option>
+          ${chapterOptionsHTML(state.rangeChapter, state.rangeSubject)}
         </select>
         <span style="font-size:13px;color:var(--muted);margin-left:auto;">当前共 <b>${deck.length}</b> 张卡片 · 正在看第 <b>${state.cardIndex + 1}</b> 张</span>
       </div>
@@ -9248,7 +9385,7 @@ function cardsV2() {
     <div class="card-study-layout ${state.focusMode ? 'focus-layout' : ''}">
       <section class="review-card single-card swipe-card ${state.focusMode ? 'focus-card' : ''}" id="swipe-card">
         <div class="card-meta">
-          <span>${escapeHtml(subjectName(k.subject))} · ${escapeHtml(k.chapter)}</span>
+          <span>${escapeHtml(subjectName(k.subject))} · ${escapeHtml(chapterDisplay(k))}</span>
           <div style="display:flex;gap:6px;align-items:center;">
             <button class="ghost-btn-micro" onclick="toggleFocusMode()" title="快捷键 F 切换专注模式">
               ${state.focusMode ? '退出专注' : '专注'}
@@ -9330,7 +9467,7 @@ function cardsV2() {
             <button class="directory-item ${i === state.cardIndex ? 'selected' : ''}" onclick="selectCard(${i})" title="${escapeAttr(c.title)} (${escapeAttr(c.chapter || '')})">
               <span class="directory-item-main">
                 <strong>${escapeHtml(c.title)}</strong>
-                <small>${escapeHtml(c.chapter || '未归类章节')}</small>
+                <small>${escapeHtml(chapterDisplay(c))}</small>
               </span>
               ${c.level === 'high' ? '<span class="tag accent mini">重点</span>' : ''}
             </button>
@@ -9404,19 +9541,40 @@ function setRange(type, value) {
 
 function getChapters(subject) {
   const all = allCards();
-  const chapters = [...new Set(all
+  const keys = [...new Set(all
     .filter((c) => subject === 'all' || c.subject === subject)
-    .map((c) => c.chapter)
-    .filter(Boolean)
+    .map((c) => (subject === 'all' ? `${c.subject}|${c.chapter}` : c.chapter))
+    .filter((key) => key && key !== '|' && !String(key).endsWith('|'))
   )];
-  
-  // 按照章节数字顺序排序 (如 '1', '2', '12', '13'...)
-  return chapters.sort((a, b) => {
-    const numA = parseInt(a, 10);
-    const numB = parseInt(b, 10);
-    if (!isNaN(numA) && !isNaN(numB)) return numA - numB;
-    return a.localeCompare(b);
+
+  return keys.sort((a, b) => {
+    const scopeA = splitChapterKey(a);
+    const scopeB = splitChapterKey(b);
+    const bySubject = subjectOrderIndex(scopeA.subject || subject) - subjectOrderIndex(scopeB.subject || subject);
+    if (bySubject) return bySubject;
+    const byChapter = chapterOrderValue(scopeA.chapter) - chapterOrderValue(scopeB.chapter);
+    if (byChapter) return byChapter;
+    return String(a).localeCompare(String(b), 'zh-Hans-CN');
   });
+}
+
+// 章节下拉选项：全部科目时按科目分组，单科目时直接平铺
+function chapterOptionsHTML(selected, subjectFilter) {
+  const chapters = getChapters(subjectFilter);
+  const optionHTML = (key, label) =>
+    `<option value="${escapeAttr(key)}" ${String(selected) === String(key) ? 'selected' : ''}>${escapeHtml(label)}</option>`;
+
+  if (subjectFilter !== 'all') {
+    return chapters.map((key) => optionHTML(key, getChapterName(key, subjectFilter))).join('');
+  }
+
+  return SUBJECTS.map((s) => {
+    const items = chapters.filter((key) => splitChapterKey(key).subject === s.id);
+    if (!items.length) return '';
+    return `<optgroup label="${escapeAttr(s.name)}">${items
+      .map((key) => optionHTML(key, getChapterName(key, s.id)))
+      .join('')}</optgroup>`;
+  }).join('');
 }
 
 function previousCard() {
