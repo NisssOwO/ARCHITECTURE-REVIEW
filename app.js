@@ -19660,6 +19660,14 @@ try {
   savedProgress = JSON.parse(localStorage.getItem('arch-last-progress'));
 } catch (e) {}
 
+// 安全防护：清理旧的脏进度缓存
+if (savedProgress && savedProgress.rangeChapter) {
+  const chapStr = String(savedProgress.rangeChapter);
+  if (chapStr.includes('(') || chapStr.startsWith('全部章节')) {
+    savedProgress.rangeChapter = 'all';
+  }
+}
+
 let state = {
   view: savedProgress?.view || 'dashboard',
   subject: savedProgress?.rangeSubject || 'all',
@@ -20230,7 +20238,14 @@ function cardsV2() {
   const subjects = [...new Set(all.map((c) => c.subject))];
   const chapters = getChapters(state.rangeSubject);
 
-  const deck = cardRangeCards();
+  let deck = cardRangeCards();
+
+  // 自愈逻辑：如果用户保存的旧章节筛选在当前题库中已不存在导致 deck 为空，自动重置为 'all'，无需用户每次手动点击重置
+  if (!deck.length && all.length > 0 && state.rangeChapter !== 'all') {
+    state.rangeChapter = 'all';
+    saveProgress();
+    deck = cardRangeCards();
+  }
 
   if (!deck.length) {
     content.innerHTML = `
@@ -20440,6 +20455,7 @@ function resetCardFilters() {
   state.rangeChapter = 'all';
   state.cardIndex = 0;
   state.answerShown = false;
+  saveProgress();
   render();
 }
 
