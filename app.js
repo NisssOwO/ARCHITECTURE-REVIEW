@@ -1,9 +1,13 @@
-const SUBJECTS = [
-  { id: 'china', name: '中国建筑史', files: 12, color: '#a56842', desc: '中国古代建筑、木构架与建筑群体' },
-  { id: 'foreign', name: '外国建筑史', files: 12, color: '#53758b', desc: '古代文明、古典建筑与历史类型' },
-  { id: 'modern', name: '外国近现代建筑史', files: 12, color: '#866e85', desc: '现代建筑运动、流派与代表作品' },
-  { id: 'public', name: '公共建筑设计原理', files: 7, color: '#75866c', desc: '总体环境、空间组织与设计原则' },
-];
+const CHAPTER_TITLES = {
+  '1': '中国古代建筑特征',
+  '2': '古代建筑平面',
+  '12': '木构架与屋面',
+  // ... 其他章节映射
+};
+
+function getChapterName(chapter) {
+  return CHAPTER_TITLES[chapter] ? `${chapter}. ${CHAPTER_TITLES[chapter]}` : `第${chapter}章`;
+}
 
 const SAMPLE_CARDS = [
   {
@@ -9167,7 +9171,7 @@ function cardsV2() {
           </select>
           <select class="filter" onchange="setRange('chapter', this.value)">
             <option value="all">全部章节 (${chapters.length})</option>
-            ${chapters.map((c) => `<option value="${escapeAttr(c)}" ${state.rangeChapter === c ? 'selected' : ''}>${escapeHtml(c)}</option>`).join('')}
+            ${chapters.map((c) => `<option value="${escapeAttr(c)}" ${state.rangeChapter === c ? 'selected' : ''}>${escapeHtml(getChapterName(c))}</option>`).join('')}
           </select>
           <span style="font-size:13px;color:var(--muted);margin-left:auto;">当前筛选无卡片</span>
         </div>
@@ -9228,7 +9232,7 @@ function cardsV2() {
         </select>
         <select class="filter" onchange="setRange('chapter', this.value)">
           <option value="all">全部章节 (${chapters.length})</option>
-          ${chapters.map((c) => `<option value="${escapeAttr(c)}" ${state.rangeChapter === c ? 'selected' : ''}>${escapeHtml(c)}</option>`).join('')}
+          ${chapters.map((c) => `<option value="${escapeAttr(c)}" ${state.rangeChapter === c ? 'selected' : ''}>${escapeHtml(getChapterName(c))}</option>`).join('')}
         </select>
         <span style="font-size:13px;color:var(--muted);margin-left:auto;">当前共 <b>${deck.length}</b> 张卡片 · 正在看第 <b>${state.cardIndex + 1}</b> 张</span>
       </div>
@@ -9400,11 +9404,19 @@ function setRange(type, value) {
 
 function getChapters(subject) {
   const all = allCards();
-  return [...new Set(all
+  const chapters = [...new Set(all
     .filter((c) => subject === 'all' || c.subject === subject)
     .map((c) => c.chapter)
     .filter(Boolean)
   )];
+  
+  // 按照章节数字顺序排序 (如 '1', '2', '12', '13'...)
+  return chapters.sort((a, b) => {
+    const numA = parseInt(a, 10);
+    const numB = parseInt(b, 10);
+    if (!isNaN(numA) && !isNaN(numB)) return numA - numB;
+    return a.localeCompare(b);
+  });
 }
 
 function previousCard() {
