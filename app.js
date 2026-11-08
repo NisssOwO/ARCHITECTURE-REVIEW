@@ -156,7 +156,7 @@ function chapterDisplay(card) {
 }
 
 function matchesChapter(card, key) {
-  if (!key || key === 'all') return true;
+  if (!key || key === 'all' || String(key).startsWith('全部章节')) return true;
   if (String(key).includes('|')) return `${card.subject}|${card.chapter}` === String(key);
   return String(card.chapter) === String(key);
 }
@@ -19663,12 +19663,12 @@ try {
 let state = {
   view: savedProgress?.view || 'dashboard',
   subject: savedProgress?.rangeSubject || 'all',
-  chapter: savedProgress?.rangeChapter || 'all',
+  chapter: (savedProgress?.rangeChapter && !String(savedProgress.rangeChapter).startsWith('全部章节')) ? savedProgress.rangeChapter : 'all',
   cardFilter: savedProgress?.cardFilter || 'all',
   cardMode: savedProgress?.cardMode || 'browse', // 'browse' | 'review'
   rangeSubject: savedProgress?.rangeSubject || 'all',
   rangeBook: 'all',
-  rangeChapter: savedProgress?.rangeChapter || 'all',
+  rangeChapter: (savedProgress?.rangeChapter && !String(savedProgress.rangeChapter).startsWith('全部章节')) ? savedProgress.rangeChapter : 'all',
   search: '',
   answerShown: false,
   cardIndex: typeof savedProgress?.cardIndex === 'number' ? savedProgress.cardIndex : 0,
@@ -20259,8 +20259,8 @@ function cardsV2() {
             ${subjects.map((s) => `<option value="${escapeAttr(s)}" ${state.rangeSubject === s ? 'selected' : ''}>${escapeHtml(subjectName(s))}</option>`).join('')}
           </select>
           <select class="filter" onchange="setRange('chapter', this.value)">
-            <option value="all">全部章节 (${chapters.length})</option>
-            ${chapters.map((c) => `<option value="${escapeAttr(c)}" ${state.rangeChapter === c ? 'selected' : ''}>${escapeHtml(getChapterName(c))}</option>`).join('')}
+            <option value="all">全部章节</option>
+            ${chapterOptionsHTML(state.rangeChapter, state.rangeSubject)}
           </select>
           <span style="font-size:13px;color:var(--muted);margin-left:auto;">当前筛选无卡片</span>
         </div>
