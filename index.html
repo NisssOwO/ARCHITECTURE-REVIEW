@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111417">
+  <title>筑忆 · 建筑理论复习工作台</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <span class="brand-mark">筑</span>
+        <div class="brand-text">
+          <strong>筑忆</strong>
+          <small>ARCHITECTURE REVIEW</small>
+        </div>
+      </div>
+
+      <div class="nav-group-label">学习空间</div>
+      <nav class="nav-list">
+        <button class="nav-item active" data-view="dashboard">
+          <span class="nav-icon">⌂</span>
+          <span class="nav-label">学习总览</span>
+        </button>
+        <button class="nav-item" data-view="materials">
+          <span class="nav-icon">▤</span>
+          <span class="nav-label">资料浏览</span>
+          <b class="nav-badge" id="nav-materials-count">12</b>
+        </button>
+        <button class="nav-item" data-view="cards">
+          <span class="nav-icon">↻</span>
+          <span class="nav-label">复习卡片</span>
+          <b class="nav-badge accent" id="nav-due-count">12</b>
+        </button>
+        <button class="nav-item" data-view="mistakes">
+          <span class="nav-icon">★</span>
+          <span class="nav-label">错题与收藏</span>
+          <b class="nav-badge" id="nav-fav-count">0</b>
+        </button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-quick-box">
+          <div class="quick-box-title">本地资料库</div>
+          <p class="quick-box-desc" id="sidebar-import-status">当前使用内置示例卡片，可导入 Markdown 笔记建立完整题库。</p>
+          <button class="ghost small-full-btn" onclick="document.getElementById('folder-input').click()">＋ 导入笔记文件夹</button>
+        </div>
+        <button class="nav-item" data-view="settings">
+          <span class="nav-icon">⚙</span>
+          <span class="nav-label">数据与设置</span>
+        </button>
+        <p class="sidebar-footnote">本地优先 · 离线可用 · 数据存于本机</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-menu" id="mobile-menu" aria-label="打开菜单">☰</button>
+          <div class="crumb" id="crumb">学习总览 / 今日状态</div>
+        </div>
+        <div class="top-actions">
+          <div class="topbar-search" id="topbar-search">
+            <span class="search-icon">⌕</span>
+            <input id="search-input" placeholder="搜索知识点、建筑师、朝代或关键词…" autocomplete="off">
+            <button class="clear-search-btn hidden" id="clear-search" title="清除搜索">✕</button>
+          </div>
+          <button class="icon-button mobile-search-btn" id="search-toggle" title="搜索知识点">⌕</button>
+          <button class="ghost topbar-import-btn" onclick="document.getElementById('folder-input').click()">导入资料</button>
+          <div class="avatar" title="建筑学考研复习">筑</div>
+        </div>
+      </header>
+
+      <div class="search-row hidden" id="search-row">
+        <input id="mobile-search-input" placeholder="搜索知识点、案例或关键词…" autocomplete="off">
+        <button id="mobile-clear-search">清除</button>
+      </div>
+
+      <div class="content" id="content"></div>
+    </main>
+  </div>
+
+  <input type="file" id="folder-input" webkitdirectory directory multiple hidden>
+  <input type="file" id="files-input" accept=".md,text/markdown,text/plain" multiple hidden>
+  <input type="file" id="backup-input" accept="application/json,.json" hidden>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
