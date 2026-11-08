@@ -1713,6 +1713,26 @@ select.filter {
   .single-card {
     min-height: 340px;
   }
+  .review-card .question {
+    font-size: 22px;
+    line-height: 1.35;
+    margin: 12px 0 16px;
+  }
+  .review-card.focus-card .question {
+    font-size: 24px;
+    line-height: 1.35;
+    margin: 12px 0 18px;
+  }
+  .answer {
+    padding: 18px 16px;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+  .review-card.focus-card .answer {
+    padding: 20px 16px;
+    font-size: 16px;
+    line-height: 1.8;
+  }
   .rating-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
