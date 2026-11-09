@@ -19686,6 +19686,7 @@ let state = {
   reviewed: JSON.parse(localStorage.getItem('arch-reviewed') || '[]'),
   lastReview: null,
   favorites: JSON.parse(localStorage.getItem('arch-favorites') || '[]'),
+  sidebarOpen: true,
   imported: savedImported,
   cards: (function() {
     const storedVer = localStorage.getItem('arch-version');
@@ -19996,6 +19997,13 @@ function setSubject(id) {
 function setChapter(chapter) {
   state.chapter = chapter;
   render();
+}
+
+
+function toggleSidebar(open) {
+  state.sidebarOpen = open !== undefined ? open : !state.sidebarOpen;
+  document.getElementById('sidebar').classList.toggle('open', state.sidebarOpen);
+  document.getElementById('sidebar-backdrop').classList.toggle('open', state.sidebarOpen);
 }
 
 function layout() {
