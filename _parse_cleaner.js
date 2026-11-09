@@ -35,6 +35,8 @@ function cleanTitle(str) {
   if (!str) return '';
   return str
     .replace(/==|\*\*/g, '')
+    .replace(/<\/?u>/gi, '')
+    .replace(/\*/g, '')
     .replace(/^[#\s]+/, '')
     .replace(/^[【(（]?([0-9]+|[一二三四五六七八九十]+|[①②③④⑤⑥⑦⑧⑨⑩]+)[)）】、.]\s*/, '')
     .replace(/^([0-9]+|[一二三四五六七八九十]+)[、.]\s*/, '')
@@ -161,6 +163,16 @@ function parseMarkdownFile(fullPath) {
       } else if (level === 3) {
         h3 = text;
       }
+      // CIAM 笔记使用普通段落，没有加粗题头；以二级章节作为卡片容器，
+      // 否则整篇内容会因没有 current 而被丢弃。
+      if (subject === 'theory' && /12-CIAM专题/.test(relPath) && level === 2) {
+        current = {
+          title: cleanTitle(headingCore(text)) || '重点考点',
+          ctx: contextLabel(),
+          body: '',
+          level: 'normal'
+        };
+      }
       continue;
     }
 
@@ -201,6 +213,12 @@ function parseMarkdownFile(fullPath) {
     // 例如：**1）混合结构-按不同承重方式-分类**
     const isHeaderOnly = /^(?:==\*\*[^*=]+?\*\*==|\*\*[^*]+?\*\*)$/.test(line) ||
                          /^(?:==\*\*)?[【(（]?(?:[0-9]+|[一二三四五六七八九十]+)[)）】、.][^：:\n]+(?:\*\*==|\*\*)?$/.test(line);
+
+    // CIAM 原文的【1】…【2】…条目没有冒号，也不应被当作新题头。
+    if (subject === 'theory' && /12-CIAM专题/.test(relPath) && /^【\d+】/.test(line) && current) {
+      current.body += (current.body ? '\n' : '') + line;
+      continue;
+    }
 
     // 规则 3：一行内包含【考点/题干】和【答案正文/实例】
     // 例如：**4）【生态性】高层建筑：【1】法兰克福商业银行大厦（N.福斯特）；【2】...**
