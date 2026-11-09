@@ -233,7 +233,7 @@ let state = {
       const customCards = savedCards.filter(c => String(c.id).startsWith('custom-'));
       const merged = [...SAMPLE_CARDS, ...customCards];
       localStorage.setItem('arch-cards', JSON.stringify(merged));
-      localStorage.setItem('arch-version', '2.3');
+      localStorage.setItem('arch-version', '2.4');
       return merged;
     }
     return savedCards.length ? savedCards : [...SAMPLE_CARDS];
@@ -538,10 +538,21 @@ function setChapter(chapter) {
 }
 
 
-function toggleSidebar(open) {
-  state.sidebarOpen = open !== undefined ? open : !state.sidebarOpen;
-  document.getElementById('sidebar').classList.toggle('open', state.sidebarOpen);
-  document.getElementById('sidebar-backdrop').classList.toggle('open', state.sidebarOpen);
+function toggleSidebar(forceState) {
+  const sb = document.getElementById("sidebar");
+  if (!sb) return;
+  const isMobile = window.innerWidth <= 840;
+  if (isMobile) {
+    state.sidebarOpen = forceState !== undefined ? forceState : !state.sidebarOpen;
+    sb.classList.toggle("open", state.sidebarOpen);
+    const bd = document.getElementById("sidebar-backdrop");
+    if (bd) bd.classList.toggle("open", state.sidebarOpen);
+  } else {
+    const isCollapsed = forceState !== undefined ? !forceState : !sb.classList.contains("collapsed");
+    sb.classList.toggle("collapsed", isCollapsed);
+    const shell = document.querySelector(".app-shell");
+    if (shell) shell.classList.toggle("sidebar-collapsed", isCollapsed);
+  }
 }
 
 function layout() {
@@ -1857,13 +1868,13 @@ async function hydrate() {
     if (imported) state.imported = imported;
     const storedVer = localStorage.getItem('arch-version');
     const hasTheory = Array.isArray(cards) && cards.some(c => c.subject === 'theory');
-    if (storedVer === '2.3' && hasTheory && Array.isArray(cards) && cards.length) {
+    if (storedVer === '2.4' && hasTheory && Array.isArray(cards) && cards.length) {
       state.cards = cards;
     } else {
       const customCards = Array.isArray(cards) ? cards.filter(c => String(c.id).startsWith('custom-')) : [];
       state.cards = [...SAMPLE_CARDS, ...customCards];
       dbPut('cards', state.cards);
-      localStorage.setItem('arch-version', '2.3');
+      localStorage.setItem('arch-version', '2.4');
     }
   } catch (err) {
     console.warn('Hydration from IndexedDB fallback to localStorage:', err);

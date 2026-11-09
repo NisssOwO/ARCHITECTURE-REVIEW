@@ -90,19 +90,18 @@ button:active {
   position: fixed;
   inset: 0 auto 0 0;
   width: 248px;
-  transform: translateX(-100%);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.sidebar.open {
-  transform: translateX(0);
-}
   padding: 24px 16px 18px;
   border-right: 1px solid var(--line);
   background: var(--bg-sidebar);
   display: flex;
   flex-direction: column;
   z-index: 20;
+  transform: translateX(0);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%);
 }
 
 .brand {
@@ -1765,4 +1764,11 @@ u.hl-underline {
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-color: rgba(212, 137, 92, 0.7);
+}
+
+.app-shell.sidebar-collapsed {
+  grid-template-columns: 0 1fr;
+}
+.app-shell.sidebar-collapsed .sidebar {
+  transform: translateX(-100%);
 }
