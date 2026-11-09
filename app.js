@@ -19832,9 +19832,19 @@ function escapeHtml(value) {
     .replace(/'/g, '&#039;');
 }
 
+
+function formatTitle(text) {
+  if (!text) return '';
+  let html = escapeHtml(text);
+  html = html.replace(/&lt;u&gt;([\s\S]*?)&lt;\/u&gt;/gi, '<u class="hl-underline">$1</u>');
+  return html;
+}
+
 function formatBody(text) {
   if (!text) return '';
   let html = escapeHtml(text);
+  // 支持原文档中的 <u>...</u> 下划线重点语法（经过 escapeHtml 后为 &lt;u&gt;...&lt;/u&gt;）
+  html = html.replace(/&lt;u&gt;([\s\S]*?)&lt;\/u&gt;/gi, '<u class="hl-underline">$1</u>');
   // 取消正文红字，重点与加粗统一使用加粗表现，卡片右上角已专门标明重点
   // 支持 ==**重点**==、==重点==、**重点**
   html = html.replace(/==\*\*(.+?)\*\*==/g, '<strong class="hl-bold">$1</strong>');
@@ -20208,7 +20218,7 @@ function materialRowHTML(k) {
           <span class="tag ${k.level === 'high' ? 'accent' : ''}">${k.level === 'high' ? '重点考点' : '基础知识'}</span>
           <small style="color:var(--muted)">${escapeHtml(subjectName(k.subject))} · ${escapeHtml(chapterDisplay(k))}</small>
         </div>
-        <h3 style="margin:0 0 8px 0;font-size:16px;">${escapeHtml(k.title)}</h3>
+        <h3 style="margin:0 0 8px 0;font-size:16px;">${formatTitle(k.title)}</h3>
         <p class="material-body-preview" style="color:var(--body);line-height:1.6;font-size:14px;margin:0 0 8px 0;">${formatBody(k.body)}</p>
       </div>
       <div style="display:flex;flex-direction:column;gap:8px;align-self:flex-start;">
@@ -20362,7 +20372,7 @@ function cardsV2() {
         </div>
 
         <div class="question ${k.level === 'high' ? 'high' : ''}">
-          ${escapeHtml(k.title)}
+          ${formatTitle(k.title)}
           <small class="question-prompt">请回答核心考点与原理：</small>
         </div>
 
@@ -20433,7 +20443,7 @@ function cardsV2() {
           ${deck.map((c, i) => `
             <button class="directory-item ${i === state.cardIndex ? 'selected' : ''}" onclick="selectCard(${i})" title="${escapeAttr(c.title)} (${escapeAttr(c.chapter || '')})">
               <span class="directory-item-main">
-                <strong>${escapeHtml(c.title)}</strong>
+                <strong>${formatTitle(c.title)}</strong>
                 <small>${escapeHtml(chapterDisplay(c))}</small>
               </span>
               ${c.level === 'high' ? '<span class="tag accent mini">重点</span>' : ''}

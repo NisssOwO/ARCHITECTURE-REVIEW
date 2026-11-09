@@ -1753,3 +1753,9 @@ select.filter {
     width: 100%;
   }
 }
+/* 文档内下划线重点语法解析样式 */
+u.hl-underline {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(212, 137, 92, 0.7);
+}
