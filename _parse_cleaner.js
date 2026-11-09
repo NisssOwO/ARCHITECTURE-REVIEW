@@ -296,6 +296,32 @@ allMd.forEach(f => {
   totalCards.push(...cards);
 });
 
+// 对重复标题补充正文中的第一个具体名词，保留原有语义并提升目录可辨识度。
+// 若正文没有可用区分词，则保持原题名，避免人为制造无意义编号。
+const titleGroups = new Map();
+totalCards.forEach(card => {
+  if (!titleGroups.has(card.title)) titleGroups.set(card.title, []);
+  titleGroups.get(card.title).push(card);
+});
+for (const [title, group] of titleGroups) {
+  if (group.length < 2) continue;
+  const used = new Set();
+  for (const card of group) {
+    const named = firstMeaningfulSegment(card.body)
+      .replace(/^[（(【\[]?\d+[)）】\].、]?\s*/, '')
+      .trim();
+    if (!named || named.length < 2 || named.length > 18 || named === title) continue;
+    const candidate = `${title} · ${named}`;
+    if (used.has(candidate)) continue;
+    card.title = candidate;
+    used.add(candidate);
+  }
+}
+// 标题变化后重算 ID，确保导入和后续升级仍保持稳定。
+totalCards.forEach((card, index) => {
+  card.id = stableId(`${card.source}|${card.title}|${index}`);
+});
+
 console.log('Total generated cards:', totalCards.length);
 
 // 质量审计
