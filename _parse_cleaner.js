@@ -185,6 +185,18 @@ function parseMarkdownFile(fullPath) {
       continue;
     }
 
+    // 标签后紧接的普通编号条目属于同一张卡片，例如“优点：”后的 1.、2. 条目。
+    // 只有在当前卡片正文确实以标签收尾时才合并，避免影响正常的编号题头。
+    const lastBodyLine = current ? current.body.trim().split(/\r?\n/).pop().replace(/==|\*{2}/g, '').trim() : '';
+    if (current && /^\d+[.、）)]\s*/.test(line) && /^(?:优点|缺点|反思|特征|简介|评价|设计要点|功能组成|建筑实例)[：:]\s*$/.test(lastBodyLine)) {
+      current.body += (current.body ? '\n' : '') + line;
+      continue;
+    }
+    if (current && /^[*]{0,2}[①②③④⑤⑥⑦⑧⑨⑩]/.test(line) && /^(?:优点|缺点|反思|特征|简介|评价|设计要点|功能组成|建筑实例)[：:]\s*$/.test(lastBodyLine)) {
+      current.body += (current.body ? '\n' : '') + line;
+      continue;
+    }
+
     // 规则 1：子序号（①②③、a. b. c. 等），子项绝不作为新卡片，必须归属于当前卡片
     // 关键修正：pending 整行高亮形如 ==**④艺术：理性、感性相结合…**== 时，先剥掉 == 与 ** 再判断首字符，
     // 否则会被 isHeaderOnly 误认成题干，产出「④艺术：…」这类残句标题。
