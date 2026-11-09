@@ -179,7 +179,8 @@ function parseMarkdownFile(fullPath) {
     // 规则 0：纯“标签行”，例如 ==**特征：**==、**布局：**、**①平面**：
     // 这类行只是上一张卡片的正文小标题，绝不能独立成卡（否则会产出大量重复的“特征”“特点”标题）
     const labelOnly = /^=*\*{0,2}\s*(特征|特点|优点|缺点|布局|平面|空间|形式|形式风格|风格|结构|材料|流线|功能|设计者|代表作|代表作品|建筑实例|实例|评价|局限性|进步意义|要求|选址|总平面|功能构成|功能组成|设计要点|建筑成就|代表人物)\s*[:：]\s*\*{0,2}=*$/;
-    if (labelOnly.test(line)) {
+    const boldLabelOnly = /^(?:\*{2}\s*[^*：:]+\s*[：:]\s*\*{2}|\*{2}\s*[^*：:]+\s*\*{2}\s*[：:])$/;
+    if (labelOnly.test(line) || boldLabelOnly.test(line)) {
       if (current) current.body += (current.body ? '\n' : '') + line;
       continue;
     }
