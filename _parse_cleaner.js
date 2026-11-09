@@ -3,6 +3,8 @@ const path = require('path');
 
 function cleanTitle(str) {
   if (!str) return '';
+  str = str.replace(/^[0-9①②③④⑤⑥⑦⑧⑨⑩一二三四五六七八九十]+[、.）)）]*/g, '');
+  if (!str) return '';
   return str
     .replace(/^==\*\*|\*\*==$/g, '')
     .replace(/^\*\*|\*\*$/g, '')

@@ -1,0 +1,738 @@
+[
+  {
+    "card_id": 1,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "我国提出的碳达峰和碳中和目标是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 350,
+      "y": 240,
+      "width": 1600,
+      "height": 100
+    },
+    "needs_review": false,
+    "reason": "对应脑图顶部国家双碳战略时间表与实现方式总述"
+  },
+  {
+    "card_id": 2,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "碳中和是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 350,
+      "y": 310,
+      "width": 1600,
+      "height": 90
+    },
+    "needs_review": false,
+    "reason": "对应(1) 碳中和术语概念定义"
+  },
+  {
+    "card_id": 3,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "碳达峰是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 350,
+      "y": 400,
+      "width": 1600,
+      "height": 90
+    },
+    "needs_review": false,
+    "reason": "对应(2) 碳达峰术语概念定义"
+  },
+  {
+    "card_id": 4,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "绿色建筑是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 500,
+      "y": 287,
+      "width": 1460,
+      "height": 82
+    },
+    "needs_review": false,
+    "reason": "对应【1】绿色建筑标准定义"
+  },
+  {
+    "card_id": 5,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "绿色性能包括哪些方面？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 500,
+      "y": 369,
+      "width": 1460,
+      "height": 90
+    },
+    "needs_review": false,
+    "reason": "对应【2】绿色性能六大综合性能描述"
+  },
+  {
+    "card_id": 6,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "建筑全寿命期包括哪些阶段？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 500,
+      "y": 805,
+      "width": 1460,
+      "height": 93
+    },
+    "needs_review": false,
+    "reason": "对应【6】建筑全寿命期四个阶段与全循环过程"
+  },
+  {
+    "card_id": 7,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "建筑体形系数是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 500,
+      "y": 898,
+      "width": 1460,
+      "height": 93
+    },
+    "needs_review": false,
+    "reason": "对应【7】建筑体形系数定义与节能实质"
+  },
+  {
+    "card_id": 8,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "中水（再生水）是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 500,
+      "y": 991,
+      "width": 1460,
+      "height": 119
+    },
+    "needs_review": false,
+    "reason": "对应【8】中水（再生水）定义与非饮用水用途"
+  },
+  {
+    "card_id": 9,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "零能建筑是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 500,
+      "y": 1110,
+      "width": 1460,
+      "height": 93
+    },
+    "needs_review": false,
+    "reason": "对应【9】零能建筑不使用常规能源定义"
+  },
+  {
+    "card_id": 10,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "可再生能源包括哪些？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 500,
+      "y": 1203,
+      "width": 1460,
+      "height": 93
+    },
+    "needs_review": false,
+    "reason": "对应【10】可再生能源非化石能源种类"
+  },
+  {
+    "card_id": 11,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "低碳建筑和零碳建筑有什么区别？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 500,
+      "y": 1296,
+      "width": 1460,
+      "height": 135
+    },
+    "needs_review": false,
+    "reason": "对应【11】低碳建筑与【12】零碳建筑的区别与定义"
+  },
+  {
+    "card_id": 12,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "生态建筑是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 500,
+      "y": 1431,
+      "width": 1460,
+      "height": 93
+    },
+    "needs_review": false,
+    "reason": "对应【13】生态建筑生态系统与物质循环定义"
+  },
+  {
+    "card_id": 13,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "节能建筑是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 500,
+      "y": 1524,
+      "width": 1460,
+      "height": 93
+    },
+    "needs_review": false,
+    "reason": "对应【14】节能建筑气候设计原则与定义"
+  },
+  {
+    "card_id": 14,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "可持续建筑的目标是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 500,
+      "y": 1617,
+      "width": 1460,
+      "height": 119
+    },
+    "needs_review": false,
+    "reason": "对应【15】可持续建筑目标与原则策略"
+  },
+  {
+    "card_id": 15,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "可持续建筑常用策略有哪些？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 500,
+      "y": 1617,
+      "width": 1460,
+      "height": 119
+    },
+    "needs_review": false,
+    "reason": "对应【15】可持续建筑核心策略（文脉延续、适宜技术、环保材料等）"
+  },
+  {
+    "card_id": 16,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "气候适应性建筑是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 500,
+      "y": 1736,
+      "width": 1460,
+      "height": 93
+    },
+    "needs_review": false,
+    "reason": "对应【16】气候适应性建筑设计过程与环境目标"
+  },
+  {
+    "card_id": 17,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "绿色建筑评价五项指标是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 400,
+      "y": 2092,
+      "width": 1560,
+      "height": 66
+    },
+    "needs_review": false,
+    "reason": "对应(2) 绿色建筑评价体系 -> 0) 五项指标总述"
+  },
+  {
+    "card_id": 18,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "绿色建筑评价中的安全耐久包括什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 400,
+      "y": 2158,
+      "width": 1560,
+      "height": 58
+    },
+    "needs_review": false,
+    "reason": "对应1) 安全耐久具体指标条目"
+  },
+  {
+    "card_id": 19,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "绿色建筑评价中的健康舒适包括什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 400,
+      "y": 2216,
+      "width": 1560,
+      "height": 59
+    },
+    "needs_review": false,
+    "reason": "对应2) 健康舒适具体指标条目"
+  },
+  {
+    "card_id": 20,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "绿色建筑评价中的生活便利包括什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 400,
+      "y": 2275,
+      "width": 1560,
+      "height": 59
+    },
+    "needs_review": false,
+    "reason": "对应3) 生活便利具体指标条目"
+  },
+  {
+    "card_id": 21,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "绿色建筑评价中的节约资源包括什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 400,
+      "y": 2334,
+      "width": 1560,
+      "height": 118
+    },
+    "needs_review": false,
+    "reason": "对应4) 节约资源四节具体指标条目"
+  },
+  {
+    "card_id": 22,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "绿色建筑评价中的环境宜居包括什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 400,
+      "y": 2452,
+      "width": 1560,
+      "height": 56
+    },
+    "needs_review": false,
+    "reason": "对应5) 环境宜居具体指标条目"
+  },
+  {
+    "card_id": 23,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "绿色建筑等级分为哪四级？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 380,
+      "y": 2508,
+      "width": 1580,
+      "height": 82
+    },
+    "needs_review": false,
+    "reason": "对应(3) 绿色建筑等级划分（基本级、一星级、二星级、三星级）"
+  },
+  {
+    "card_id": 24,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-1.jpg",
+    "card_front": "美国、英国、日本、德国的绿色建筑评价体系分别是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 380,
+      "y": 2590,
+      "width": 1580,
+      "height": 110
+    },
+    "needs_review": false,
+    "reason": "对应(4) 其他国家绿色建筑评价体系（LEED, BREEAM, CASBEE, DGNB）"
+  },
+  {
+    "card_id": 25,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "低技术、适宜技术和高技术策略有什么区别？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 232,
+      "width": 1510,
+      "height": 293
+    },
+    "needs_review": false,
+    "reason": "对应(5) 绿色建筑技术策略 -> 1) 低技术、2) 适宜技术、3) 高技术策略定义对比"
+  },
+  {
+    "card_id": 26,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "被动式技术包括哪些？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 525,
+      "width": 1510,
+      "height": 55
+    },
+    "needs_review": false,
+    "reason": "对应5) 被动式技术内容（围护结构、集热蓄热、自然采光通风等）"
+  },
+  {
+    "card_id": 27,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "主动式技术包括哪些？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 580,
+      "width": 1510,
+      "height": 55
+    },
+    "needs_review": false,
+    "reason": "对应6) 主动式技术内容（机械通风、光伏、光热、地源热泵等）"
+  },
+  {
+    "card_id": 28,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "绿色建筑如何进行旧建筑和材料再利用？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 430,
+      "width": 1510,
+      "height": 95
+    },
+    "needs_review": false,
+    "reason": "对应4) 其他技术策略：旧建筑更新改造与旧材料回收利用"
+  },
+  {
+    "card_id": 29,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "规划阶段的全寿命绿色策略是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 635,
+      "width": 1510,
+      "height": 127
+    },
+    "needs_review": false,
+    "reason": "对应7) 全寿命周期应对策略 -> 1. 规划阶段"
+  },
+  {
+    "card_id": 30,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "设计阶段的全寿命绿色策略是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 635,
+      "width": 1510,
+      "height": 127
+    },
+    "needs_review": false,
+    "reason": "对应7) 全寿命周期应对策略 -> 2. 设计阶段"
+  },
+  {
+    "card_id": 31,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "施工阶段的全寿命绿色策略是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 635,
+      "width": 1510,
+      "height": 127
+    },
+    "needs_review": false,
+    "reason": "对应7) 全寿命周期应对策略 -> 3. 施工阶段"
+  },
+  {
+    "card_id": 32,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "运营阶段的全寿命绿色策略是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 635,
+      "width": 1510,
+      "height": 127
+    },
+    "needs_review": false,
+    "reason": "对应7) 全寿命周期应对策略 -> 4. 运营阶段"
+  },
+  {
+    "card_id": 33,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "毛寺生态实验小学体现了什么绿色策略？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 879,
+      "width": 1510,
+      "height": 424
+    },
+    "needs_review": false,
+    "reason": "对应(1) 低技术策略案例 -> 穆钧-毛寺生态实验小学剖面图与生土保温技术"
+  },
+  {
+    "card_id": 34,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "延安枣园窑洞改造采用了哪些绿色措施？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 879,
+      "width": 1510,
+      "height": 424
+    },
+    "needs_review": false,
+    "reason": "对应(1) 低技术策略案例 -> 刘加平-延安枣园窑洞改造屋顶覆土与阳光间剖面图"
+  },
+  {
+    "card_id": 35,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "甘多小学如何采用适宜技术？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 1379,
+      "width": 1510,
+      "height": 110
+    },
+    "needs_review": false,
+    "reason": "对应(2) 适宜技术策略案例 -> 凯雷-甘多小学粘土砖墙双重屋顶"
+  },
+  {
+    "card_id": 36,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "狮子初创园如何实现自然通风降温？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 1489,
+      "width": 1510,
+      "height": 237
+    },
+    "needs_review": false,
+    "reason": "对应(2) 适宜技术策略案例 -> 凯雷-狮子初创园区通风烟囱效应剖面图"
+  },
+  {
+    "card_id": 37,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "屋顶背后的房子如何利用朝向和屋顶？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 1726,
+      "width": 1510,
+      "height": 55
+    },
+    "needs_review": false,
+    "reason": "对应(2) 适宜技术策略案例 -> 波兰-屋顶背后的房子朝向光伏与斜坡种植屋面"
+  },
+  {
+    "card_id": 38,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "CopenHill垃圾焚烧厂如何结合能源和公共空间？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 1781,
+      "width": 1510,
+      "height": 158
+    },
+    "needs_review": false,
+    "reason": "对应(2) 适宜技术策略案例 -> BIG-CopenHill 垃圾焚烧发电与滑雪公园结合"
+  },
+  {
+    "card_id": 39,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "生物气候过滤器建筑如何实现气候调节？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 1939,
+      "width": 1510,
+      "height": 123
+    },
+    "needs_review": false,
+    "reason": "对应(2) 适宜技术策略案例 -> 3M意大利总部生物气候过滤器立面与天井"
+  },
+  {
+    "card_id": 40,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "村落红砖房绿色策略有哪些？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 2119,
+      "width": 1510,
+      "height": 79
+    },
+    "needs_review": false,
+    "reason": "对应(2) 适宜技术策略案例 -> 茬子村红砖房院落通风与屋顶光伏"
+  },
+  {
+    "card_id": 41,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-2.jpg",
+    "card_front": "金台村重建项目采用了哪些生态策略？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 2253,
+      "width": 1510,
+      "height": 224
+    },
+    "needs_review": false,
+    "reason": "对应(2) 适宜技术策略案例 -> 四川金台村顺应地形、窄巷道通风、种植屋面与沼气系统"
+  },
+  {
+    "card_id": 42,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-3.jpg",
+    "card_front": "上海崇明生态办公楼采用了哪些高技术？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 623,
+      "width": 1510,
+      "height": 336
+    },
+    "needs_review": false,
+    "reason": "对应(3) 高技术策略案例 -> 上海崇明陈家镇生态办公楼剖面及技术注解"
+  },
+  {
+    "card_id": 43,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-3.jpg",
+    "card_front": "科创大厦采用了哪些绿色智能策略？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 450,
+      "y": 1051,
+      "width": 1510,
+      "height": 282
+    },
+    "needs_review": false,
+    "reason": "对应(3) 高技术策略案例 -> 中建四局科创大厦冷巷光伏与智能建造机器人"
+  },
+  {
+    "card_id": 44,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-3.jpg",
+    "card_front": "绿色建筑设计的五项原则是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 200,
+      "y": 1370,
+      "width": 1760,
+      "height": 90
+    },
+    "needs_review": false,
+    "reason": "对应四、绿色建筑设计原则总结全部5项原则"
+  },
+  {
+    "card_id": 45,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-3.jpg",
+    "card_front": "绿色建筑为什么强调“被动优先”？",
+    "match_confidence": 0.95,
+    "crop": {
+      "x": 200,
+      "y": 1370,
+      "width": 1760,
+      "height": 90
+    },
+    "needs_review": false,
+    "reason": "对应四、绿色建筑设计原则总结第4项原则中被动优先"
+  },
+  {
+    "card_id": 46,
+    "subject": "建筑理论专题",
+    "source_file": "15-碳中和-绿色建筑理论-实践.md",
+    "page_file": "秋季-理论专题-15-【碳中和-绿色建筑理论-实-3.jpg",
+    "card_front": "绿色建筑中“因地制宜”如何体现？",
+    "match_confidence": 0.95,
+    "crop": {
+      "x": 200,
+      "y": 1370,
+      "width": 1760,
+      "height": 90
+    },
+    "needs_review": false,
+    "reason": "对应四、绿色建筑设计原则总结第4项原则中因地制宜"
+  }
+]

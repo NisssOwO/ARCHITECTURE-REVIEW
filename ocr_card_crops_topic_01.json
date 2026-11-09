@@ -1,0 +1,717 @@
+{
+  "topic": "01-建筑学场地设计",
+  "total_cards": 46,
+  "cards": [
+    {
+      "card_id": 1,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "场地设计的概念是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 350,
+        "y": 110,
+        "width": 1580,
+        "height": 110
+      },
+      "needs_review": false,
+      "reason": "对应一、场地设计概述 -> 1. 场地设计的概念"
+    },
+    {
+      "card_id": 2,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "场地由哪些主要要素构成？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 350,
+        "y": 200,
+        "width": 1580,
+        "height": 120
+      },
+      "needs_review": false,
+      "reason": "对应一、场地设计概述 -> 2. 场地构成要素"
+    },
+    {
+      "card_id": 3,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "场地选址的主要要点有哪些？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 350,
+        "y": 310,
+        "width": 1580,
+        "height": 210
+      },
+      "needs_review": false,
+      "reason": "对应一、场地设计概述 -> 3. 场地选址要点"
+    },
+    {
+      "card_id": 4,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "场地设计的要求或目标有哪些？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 430,
+        "y": 500,
+        "width": 1500,
+        "height": 160
+      },
+      "needs_review": false,
+      "reason": "对应二、场地设计的要求/目标-意义 -> 1. 场地设计的要求/目标"
+    },
+    {
+      "card_id": 5,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "场地设计的意义是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 430,
+        "y": 650,
+        "width": 1500,
+        "height": 160
+      },
+      "needs_review": false,
+      "reason": "对应二、场地设计的要求/目标-意义 -> 2. 场地设计的意义/影响"
+    },
+    {
+      "card_id": 6,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "场地设计的主要制约因素有哪些？",
+      "match_confidence": 0.95,
+      "crop": {
+        "x": 100,
+        "y": 770,
+        "width": 1850,
+        "height": 890
+      },
+      "needs_review": false,
+      "reason": "对应三、场地设计的制约因素（包含气候、地形地质、规划控制、环境四大分支整体）"
+    },
+    {
+      "card_id": 7,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "场地设计中需要关注哪些气候条件？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 380,
+        "y": 770,
+        "width": 1540,
+        "height": 90
+      },
+      "needs_review": false,
+      "reason": "对应三、场地设计的制约因素 -> 1. 气候条件"
+    },
+    {
+      "card_id": 8,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "场地设计中规划控制因素包括哪些内容？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 380,
+        "y": 960,
+        "width": 1540,
+        "height": 400
+      },
+      "needs_review": false,
+      "reason": "对应三、场地设计的制约因素 -> 3. 规划控制因素"
+    },
+    {
+      "card_id": 9,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "场地设计中环境因素包括哪些问题？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 380,
+        "y": 1350,
+        "width": 1540,
+        "height": 310
+      },
+      "needs_review": false,
+      "reason": "对应三、场地设计的制约因素 -> 4. 环境因素"
+    },
+    {
+      "card_id": 10,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "场地交通出入口的一般组织要求是什么？",
+      "match_confidence": 0.95,
+      "crop": {
+        "x": 480,
+        "y": 1420,
+        "width": 1440,
+        "height": 70
+      },
+      "needs_review": false,
+      "reason": "对应4. 环境因素 -> (2) 交通问题（基地应有两个以上不同方向通向城市道路的出入口）"
+    },
+    {
+      "card_id": 11,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "征地红线和用地红线有什么区别？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 400,
+        "y": 1650,
+        "width": 1520,
+        "height": 280
+      },
+      "needs_review": false,
+      "reason": "对应规划控制线表格中“征地红线”与“用地红线”对比"
+    },
+    {
+      "card_id": 12,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "建筑控制线（建筑红线）是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 400,
+        "y": 1860,
+        "width": 1520,
+        "height": 180
+      },
+      "needs_review": false,
+      "reason": "对应规划控制线表格中“建筑控制线（建筑红线）”行"
+    },
+    {
+      "card_id": 13,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "蓝线、绿线、紫线、黄线、黑线分别控制什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 400,
+        "y": 2030,
+        "width": 1520,
+        "height": 290
+      },
+      "needs_review": false,
+      "reason": "对应规划控制线下方红色虚线框中蓝线、绿线、紫线、黄线、黑线的具体定义"
+    },
+    {
+      "card_id": 14,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "建筑基地限制要素可归纳为哪四类？",
+      "match_confidence": 0.85,
+      "crop": {
+        "x": 400,
+        "y": 2130,
+        "width": 1520,
+        "height": 90
+      },
+      "needs_review": true,
+      "reason": "原导图此处为“(2) 基地限制要素 关联: 暑假-【建筑设计规范】专题”，四类分类汇总归纳自前序制约因素与规范"
+    },
+    {
+      "card_id": 15,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "规划控制对建筑基地有哪些限制？",
+      "match_confidence": 0.85,
+      "crop": {
+        "x": 380,
+        "y": 960,
+        "width": 1540,
+        "height": 400
+      },
+      "needs_review": true,
+      "reason": "对应三、场地设计的制约因素 -> 3. 规划控制因素（红线退让、容积率、密度、限高等）"
+    },
+    {
+      "card_id": 16,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "自然条件对建筑基地有哪些影响？",
+      "match_confidence": 0.85,
+      "crop": {
+        "x": 380,
+        "y": 770,
+        "width": 1540,
+        "height": 190
+      },
+      "needs_review": true,
+      "reason": "对应三、场地设计的制约因素 -> 1. 气候条件 与 2. 地形地质因素"
+    },
+    {
+      "card_id": 17,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "周边环境对建筑基地有哪些影响？",
+      "match_confidence": 0.85,
+      "crop": {
+        "x": 380,
+        "y": 1350,
+        "width": 1540,
+        "height": 310
+      },
+      "needs_review": true,
+      "reason": "对应三、场地设计的制约因素 -> 4. 环境因素（区域、交通、噪声、周边条件等）"
+    },
+    {
+      "card_id": 18,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "市政交通对建筑基地有哪些限制？",
+      "match_confidence": 0.8,
+      "crop": {
+        "x": 480,
+        "y": 1420,
+        "width": 1440,
+        "height": 240
+      },
+      "needs_review": true,
+      "reason": "对应环境因素中交通问题与管线因素，导图未作独立大标题"
+    },
+    {
+      "card_id": 19,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "机动车出入口距大中城市主干路交叉口应不小于多少？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 410,
+        "y": 2250,
+        "width": 1520,
+        "height": 380
+      },
+      "needs_review": false,
+      "reason": "对应机动车出入口位置规范表1第1行（不小于70m）"
+    },
+    {
+      "card_id": 20,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "机动车出入口距大中城市次干路交叉口应不小于多少？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 410,
+        "y": 2250,
+        "width": 1520,
+        "height": 380
+      },
+      "needs_review": false,
+      "reason": "对应机动车出入口位置规范表1第2行（不小于50m）"
+    },
+    {
+      "card_id": 21,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "机动车出入口距公园、学校、儿童及残疾人使用建筑物等场地出入口应不小于多少？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 410,
+        "y": 2250,
+        "width": 1520,
+        "height": 380
+      },
+      "needs_review": false,
+      "reason": "对应机动车出入口位置规范表1第3行（不小于20m）"
+    },
+    {
+      "card_id": 22,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "机动车出入口距人行横道线、过街天桥或地道最边缘线应不小于多少？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 410,
+        "y": 2250,
+        "width": 1520,
+        "height": 380
+      },
+      "needs_review": false,
+      "reason": "对应机动车出入口位置规范表1第4行（不小于5m）"
+    },
+    {
+      "card_id": 23,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "机动车出入口距地铁出入口和公共交通站台边缘应不小于多少？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 410,
+        "y": 2250,
+        "width": 1520,
+        "height": 380
+      },
+      "needs_review": false,
+      "reason": "对应机动车出入口位置规范表1第5/6行（均不小于15m）"
+    },
+    {
+      "card_id": 24,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "哪些建筑设施允许突出道路红线或用地红线？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 420,
+        "y": 2620,
+        "width": 1500,
+        "height": 100
+      },
+      "needs_review": false,
+      "reason": "对应(3) 建筑突出物 -> 【1】允许突出道路红线或用地红线的建筑设施"
+    },
+    {
+      "card_id": 25,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "哪些建筑设施允许突出建筑控制线？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 420,
+        "y": 2710,
+        "width": 1500,
+        "height": 110
+      },
+      "needs_review": false,
+      "reason": "对应(3) 建筑突出物 -> 【2】允许突出建筑控制线的建筑设施"
+    },
+    {
+      "card_id": 26,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "消防车道的净宽和净空高度要求是什么？",
+      "match_confidence": 0.5,
+      "crop": null,
+      "needs_review": true,
+      "reason": "原图仅含“(4) 消防车道 关联: 暑假-【建筑设计规范】专题”标题行，未展开该卡片答案的具体数值分支，不生成无效局部裁剪图"
+    },
+    {
+      "card_id": 27,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "消防车道的转弯半径要求是什么？",
+      "match_confidence": 0.5,
+      "crop": null,
+      "needs_review": true,
+      "reason": "原图仅含“(4) 消防车道 关联: 暑假-【建筑设计规范】专题”标题行，未展开该卡片答案的具体数值分支，不生成无效局部裁剪图"
+    },
+    {
+      "card_id": 28,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "高层或大型公共建筑的消防车道宜采用什么布局？",
+      "match_confidence": 0.5,
+      "crop": null,
+      "needs_review": true,
+      "reason": "原图仅含“(4) 消防车道 关联: 暑假-【建筑设计规范】专题”标题行，未展开该卡片答案的具体数值分支，不生成无效局部裁剪图"
+    },
+    {
+      "card_id": 29,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "消防车道尽端回车场的常见尺寸有哪些？",
+      "match_confidence": 0.5,
+      "crop": null,
+      "needs_review": true,
+      "reason": "原图仅含“(4) 消防车道 关联: 暑假-【建筑设计规范】专题”标题行，未展开该卡片答案的具体数值分支，不生成无效局部裁剪图"
+    },
+    {
+      "card_id": 30,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-1.jpg",
+      "card_front": "消防车道的坡度和承载要求是什么？",
+      "match_confidence": 0.5,
+      "crop": null,
+      "needs_review": true,
+      "reason": "原图仅含“(4) 消防车道 关联: 暑假-【建筑设计规范】专题”标题行，未展开该卡片答案的具体数值分支，不生成无效局部裁剪图"
+    },
+    {
+      "card_id": 31,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-2.jpg",
+      "card_front": "确定建筑间距需要考虑哪些因素？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 440,
+        "y": 270,
+        "width": 1500,
+        "height": 80
+      },
+      "needs_review": false,
+      "reason": "对应四、场地设计的分项要点 -> 2. 建筑间距总述引导句"
+    },
+    {
+      "card_id": 32,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-2.jpg",
+      "card_front": "建筑防火间距的常记数值是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 440,
+        "y": 340,
+        "width": 1500,
+        "height": 100
+      },
+      "needs_review": false,
+      "reason": "对应(1) 防火间距（高-高: 13m; 高-多: 9m; 多-多: 6m）"
+    },
+    {
+      "card_id": 33,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-2.jpg",
+      "card_front": "日照间距系数的表达式是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 440,
+        "y": 430,
+        "width": 1500,
+        "height": 100
+      },
+      "needs_review": false,
+      "reason": "对应(2) 日照间距（日照间距系数: L=D/H）"
+    },
+    {
+      "card_id": 34,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-2.jpg",
+      "card_front": "通风间距和视觉间距分别解决什么问题？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 480,
+        "y": 520,
+        "width": 1440,
+        "height": 120
+      },
+      "needs_review": false,
+      "reason": "对应(3) 其他间距 -> 【1】通风间距 与 【2】视觉干扰"
+    },
+    {
+      "card_id": 35,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-2.jpg",
+      "card_front": "教育建筑和医疗建筑常记的间距要求是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 480,
+        "y": 630,
+        "width": 1440,
+        "height": 120
+      },
+      "needs_review": false,
+      "reason": "对应(3) 其他间距 -> 【3】噪音间距 与 【4】卫生间距"
+    },
+    {
+      "card_id": 36,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-2.jpg",
+      "card_front": "坡地建筑场地有哪些主要处理方式？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 440,
+        "y": 760,
+        "width": 1480,
+        "height": 90
+      },
+      "needs_review": false,
+      "reason": "对应3. 场地防护工程 -> (2) 坡地建筑场地处理方式标题句"
+    },
+    {
+      "card_id": 37,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-2.jpg",
+      "card_front": "倾斜型坡地建筑的特征是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 380,
+        "y": 840,
+        "width": 1540,
+        "height": 130
+      },
+      "needs_review": false,
+      "reason": "对应表2直接式山地建筑类型-倾斜型特征及图例"
+    },
+    {
+      "card_id": 38,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-2.jpg",
+      "card_front": "错层、掉层、跌落、附岩分别有什么特点？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 380,
+        "y": 960,
+        "width": 1540,
+        "height": 240
+      },
+      "needs_review": false,
+      "reason": "对应表2阶梯型（错层、掉层、跌落、附岩）特征及图例"
+    },
+    {
+      "card_id": 39,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-2.jpg",
+      "card_front": "内侵型坡地建筑有什么特点？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 680,
+        "y": 1180,
+        "width": 1240,
+        "height": 100
+      },
+      "needs_review": false,
+      "reason": "对应表2内侵型主要特征及图例"
+    },
+    {
+      "card_id": 40,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-2.jpg",
+      "card_front": "挡土墙有哪些常记的安全与构造要求？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 380,
+        "y": 1260,
+        "width": 1540,
+        "height": 270
+      },
+      "needs_review": false,
+      "reason": "对应(3) 挡土墙构造图示与规范标注说明"
+    },
+    {
+      "card_id": 41,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-2.jpg",
+      "card_front": "场地设计包括哪些主要内容？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 340,
+        "y": 1520,
+        "width": 1580,
+        "height": 100
+      },
+      "needs_review": false,
+      "reason": "对应五、场地设计的内容前言“场地设计内容包括设计条件分析...等7个方面”"
+    },
+    {
+      "card_id": 42,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-2.jpg",
+      "card_front": "场地设计的基本工作流程是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 340,
+        "y": 1610,
+        "width": 1580,
+        "height": 270
+      },
+      "needs_review": false,
+      "reason": "对应五、场地设计的内容工作流程结构图（现场踏勘->条件分析->总体布局->技术经济分析）"
+    },
+    {
+      "card_id": 43,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-2.jpg",
+      "card_front": "竖向设计的概念是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 380,
+        "y": 1890,
+        "width": 1540,
+        "height": 100
+      },
+      "needs_review": false,
+      "reason": "对应五、场地设计的内容 -> 竖向设计 -> 1. 竖向设计-定义/概念"
+    },
+    {
+      "card_id": 44,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-2.jpg",
+      "card_front": "竖向设计的主要内容有哪些？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 380,
+        "y": 1980,
+        "width": 1540,
+        "height": 420
+      },
+      "needs_review": false,
+      "reason": "对应五、场地设计的内容 -> 竖向设计 -> 2. 竖向设计-内容(1)-(8)条"
+    },
+    {
+      "card_id": 45,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-2.jpg",
+      "card_front": "竖向设计的设计地面有哪些分类？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 380,
+        "y": 2390,
+        "width": 1540,
+        "height": 70
+      },
+      "needs_review": false,
+      "reason": "对应五、场地设计的内容 -> 竖向设计 -> 3. 竖向设计-设计地面分类（平坡式、台阶式、混合式）"
+    },
+    {
+      "card_id": 46,
+      "subject": "建筑理论专题",
+      "source_file": "01-建筑学场地设计.md",
+      "page_file": "秋季-理论专题-01-【建筑学场地设计】专题-学-2.jpg",
+      "card_front": "竖向设计的排水方式有哪些？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 380,
+        "y": 2450,
+        "width": 1540,
+        "height": 70
+      },
+      "needs_review": false,
+      "reason": "对应五、场地设计的内容 -> 竖向设计 -> 4. 竖向设计-排水设计（自然、明沟、暗管）"
+    }
+  ]
+}

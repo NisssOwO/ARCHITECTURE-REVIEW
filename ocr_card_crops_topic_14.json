@@ -1,0 +1,454 @@
+{
+  "topic": "14-公共卫生间-无障碍设计画图",
+  "total_cards": 28,
+  "cards": [
+    {
+      "card_id": 1,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "室内公共厕所的服务半径不宜超过多少？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 500,
+        "y": 80,
+        "width": 1450,
+        "height": 50
+      },
+      "needs_review": false,
+      "reason": "对应(1) 公共卫生间相关规范 -> 1) 室内公共厕所的服务半径不宜超过50.0m"
+    },
+    {
+      "card_id": 2,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "公共厕所为什么宜设置前室？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 500,
+        "y": 130,
+        "width": 1450,
+        "height": 50
+      },
+      "needs_review": false,
+      "reason": "对应(1) 公共卫生间相关规范 -> 2) 公共厕所应防止视线干扰，宜设前室"
+    },
+    {
+      "card_id": 3,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "公共厕所宜设置什么独立辅助空间？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 500,
+        "y": 175,
+        "width": 1450,
+        "height": 50
+      },
+      "needs_review": false,
+      "reason": "对应(1) 公共卫生间相关规范 -> 3) 公共厕所宜设置独立的清洁间"
+    },
+    {
+      "card_id": 4,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "男女厕位数量比例如何确定？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 500,
+        "y": 220,
+        "width": 1450,
+        "height": 150
+      },
+      "needs_review": false,
+      "reason": "对应(1) 公共卫生间相关规范 -> 4)及5) 男女厕位比例规定"
+    },
+    {
+      "card_id": 5,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "正向外开门厕位隔间尺寸是多少？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 600,
+        "y": 380,
+        "width": 700,
+        "height": 240
+      },
+      "needs_review": false,
+      "reason": "对应1) 隔间的平面尺寸规定 -> 6 正向外开门厕位隔间图示(>1200, >900)"
+    },
+    {
+      "card_id": 6,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "正向内开门厕位隔间尺寸是多少？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 1300,
+        "y": 380,
+        "width": 650,
+        "height": 240
+      },
+      "needs_review": false,
+      "reason": "对应1) 隔间的平面尺寸规定 -> 7 正向内开门厕位隔间图示(>1400, >900)"
+    },
+    {
+      "card_id": 7,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "小便器之间的净距要求是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 620,
+        "y": 860,
+        "width": 600,
+        "height": 240
+      },
+      "needs_review": false,
+      "reason": "对应2) 卫生设备的间距规定-2 -> 1 小便器净距图示(中心>=700, 距墙>=350)"
+    },
+    {
+      "card_id": 8,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "靠墙洗脸盆的净距要求是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 650,
+        "y": 660,
+        "width": 350,
+        "height": 190
+      },
+      "needs_review": false,
+      "reason": "对应2) 卫生设备的间距规定-1 -> 5 靠墙洗脸盆净距(>=550, >=550)"
+    },
+    {
+      "card_id": 9,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "单侧和双侧洗脸盆通道净宽分别是多少？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 1000,
+        "y": 660,
+        "width": 950,
+        "height": 200
+      },
+      "needs_review": false,
+      "reason": "对应2) 卫生设备的间距规定-1 -> 3 单侧洗脸盆通道(>=1250)与 4 双侧洗脸盆通道(>=1800)"
+    },
+    {
+      "card_id": 10,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "外开门和内开门厕位与对面墙或隔间的净距是多少？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 620,
+        "y": 1180,
+        "width": 1300,
+        "height": 200
+      },
+      "needs_review": false,
+      "reason": "对应3) 卫生间内通道净宽规定 -> 1 外开门对面净距(>=1300)与 2 内开门对面净距(>=1100)"
+    },
+    {
+      "card_id": 11,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "公共厕所内无障碍厕位的平面尺寸要求是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 450,
+        "y": 1520,
+        "width": 850,
+        "height": 420
+      },
+      "needs_review": false,
+      "reason": "对应二、无障碍卫生间设计-画图 -> (2-1) 无障碍厕位平面图(>=1800x1500)"
+    },
+    {
+      "card_id": 12,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "公共厕所内无障碍厕位门扇有什么要求？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 450,
+        "y": 1520,
+        "width": 850,
+        "height": 420
+      },
+      "needs_review": false,
+      "reason": "对应(2-1) 无障碍厕位平面图中标注门扇外开、净宽>=800"
+    },
+    {
+      "card_id": 13,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "公共厕所无障碍厕位应设置哪些设施？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 450,
+        "y": 1520,
+        "width": 850,
+        "height": 420
+      },
+      "needs_review": false,
+      "reason": "对应(2-1) 无障碍厕位平面图中洁具、抓杆、洗手盆布置标注"
+    },
+    {
+      "card_id": 14,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "独立无障碍卫生间的净尺寸要求是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 1300,
+        "y": 1520,
+        "width": 650,
+        "height": 420
+      },
+      "needs_review": false,
+      "reason": "对应(2-2) 无障碍独立厕所平面图(>=2000x2000)"
+    },
+    {
+      "card_id": 15,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "无障碍卫生间轮椅回转空间要求是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 1300,
+        "y": 1520,
+        "width": 650,
+        "height": 420
+      },
+      "needs_review": false,
+      "reason": "对应(2-2) 无障碍独立厕所平面图中标注直径>=1500回转空间"
+    },
+    {
+      "card_id": 16,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "独立无障碍卫生间门扇要求是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 1300,
+        "y": 1520,
+        "width": 650,
+        "height": 420
+      },
+      "needs_review": false,
+      "reason": "对应(2-2) 无障碍独立厕所平面图外开门与净宽>=900/800标注"
+    },
+    {
+      "card_id": 17,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "独立无障碍卫生间应配置哪些内部配件？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 1300,
+        "y": 1520,
+        "width": 650,
+        "height": 420
+      },
+      "needs_review": false,
+      "reason": "对应(2-2) 无障碍独立厕所平面图详细设备图例与标注"
+    },
+    {
+      "card_id": 18,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "轮椅坡道净宽不应小于多少？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 450,
+        "y": 2100,
+        "width": 1500,
+        "height": 320
+      },
+      "needs_review": false,
+      "reason": "对应三、无障碍坡道设计-画图 -> (2) 无障碍坡道平面图参考中标注净宽>=1200"
+    },
+    {
+      "card_id": 19,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "室内外轮椅坡道坡度不应大于多少？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 450,
+        "y": 2100,
+        "width": 1500,
+        "height": 320
+      },
+      "needs_review": false,
+      "reason": "对应(2) 无障碍坡道平面图参考中标注坡度<=1:12"
+    },
+    {
+      "card_id": 20,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "轮椅坡道最大水平长度是多少？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 450,
+        "y": 2100,
+        "width": 1500,
+        "height": 320
+      },
+      "needs_review": false,
+      "reason": "对应(2) 无障碍坡道平面图参考中标注最大水平段<=9000"
+    },
+    {
+      "card_id": 21,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "轮椅坡道起点、终点和中间平台的水平长度要求是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 450,
+        "y": 2100,
+        "width": 1500,
+        "height": 320
+      },
+      "needs_review": false,
+      "reason": "对应(2) 无障碍坡道平面图参考中标注起点、终点平台水平长度>=1500"
+    },
+    {
+      "card_id": 22,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "轮椅坡道转弯处休息平台的尺寸要求是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 450,
+        "y": 2100,
+        "width": 1500,
+        "height": 320
+      },
+      "needs_review": false,
+      "reason": "对应(2) 无障碍坡道平面图参考中标注转弯休息平台>=1500x1500"
+    },
+    {
+      "card_id": 23,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "无障碍坡道双层扶手高度是多少？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 450,
+        "y": 2440,
+        "width": 1500,
+        "height": 340
+      },
+      "needs_review": false,
+      "reason": "对应(3) 无障碍坡道扶手立面参考中标注双层扶手高度 850~900mm 与 650~700mm"
+    },
+    {
+      "card_id": 24,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "无障碍坡道地面材料有什么要求？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 450,
+        "y": 2440,
+        "width": 1500,
+        "height": 340
+      },
+      "needs_review": false,
+      "reason": "对应(3) 无障碍坡道扶手立面参考中标注“表面防滑的地面材料”"
+    },
+    {
+      "card_id": 25,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "无障碍坡道两侧无墙体时为什么要设安全挡台？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 450,
+        "y": 2440,
+        "width": 1500,
+        "height": 340
+      },
+      "needs_review": false,
+      "reason": "对应(3) 无障碍坡道扶手立面参考中标注安全挡台高度>=50mm及轮椅防滑挡台"
+    },
+    {
+      "card_id": 26,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "公共卫生间画图应优先标注哪些尺寸？",
+      "match_confidence": 0.9,
+      "crop": {
+        "x": 450,
+        "y": 380,
+        "width": 1500,
+        "height": 1050
+      },
+      "needs_review": false,
+      "reason": "对应公共卫生间画图核心尺寸汇总（隔间、洁具间距、通道净宽）"
+    },
+    {
+      "card_id": 27,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "公共厕所和无障碍厕所画图的共同设计原则是什么？",
+      "match_confidence": 0.9,
+      "crop": {
+        "x": 450,
+        "y": 80,
+        "width": 1500,
+        "height": 1900
+      },
+      "needs_review": false,
+      "reason": "对应公共卫生间与无障碍卫生间整体设计与画图规范要求"
+    },
+    {
+      "card_id": 28,
+      "subject": "建筑理论专题",
+      "source_file": "14-公共卫生间-无障碍设计画图.md",
+      "page_file": "秋季-理论专题-14-【公共卫生间-无障碍设计画-1.jpg",
+      "card_front": "无障碍厕位与独立无障碍卫生间的主要区别是什么？",
+      "match_confidence": 0.98,
+      "crop": {
+        "x": 450,
+        "y": 1520,
+        "width": 1500,
+        "height": 420
+      },
+      "needs_review": false,
+      "reason": "对应(2-1) 无障碍厕位平面图 与 (2-2) 无障碍独立厕所平面图 对比"
+    }
+  ]
+}

@@ -1,0 +1,575 @@
+[
+  {
+    "card_id": 1,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-01.jpg",
+    "card_front": "斯米尔扬·拉迪奇的建筑思想有哪些关键词？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 100,
+      "width": 1630,
+      "height": 380
+    },
+    "needs_review": false,
+    "reason": "对应Page 01顶部 (2) 建筑思想理念：接纳不完美与脆弱、场地原真性、材料民主、跨学科实践"
+  },
+  {
+    "card_id": 2,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-01.jpg",
+    "card_front": "拉迪奇的蛇形画廊展亭如何体现脆弱性？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 480,
+      "width": 1630,
+      "height": 380
+    },
+    "needs_review": false,
+    "reason": "对应Page 01代表作品 1）英国-伦敦-蛇形画廊展亭（实验性-脆弱性、半透明玻璃纤维壳体）"
+  },
+  {
+    "card_id": 3,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-01.jpg",
+    "card_front": "拉迪奇的米拉胡维克酒庄如何体现场所精神？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 860,
+      "width": 1630,
+      "height": 380
+    },
+    "needs_review": false,
+    "reason": "对应Page 01代表作品 2）智利-米拉胡维克酒庄（场所精神、沿起伏地形横向延伸）"
+  },
+  {
+    "card_id": 4,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-02.jpg",
+    "card_front": "刘家琨的建筑思想有哪些关键词？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 100,
+      "width": 1630,
+      "height": 380
+    },
+    "needs_review": false,
+    "reason": "对应Page 02顶部 (2) 建筑思想理念：内在品质、因地制宜、人文关怀、社区集群、低技与传统工艺"
+  },
+  {
+    "card_id": 5,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-02.jpg",
+    "card_front": "鹿野苑石刻艺术博物馆体现了刘家琨的什么思想？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 480,
+      "width": 1630,
+      "height": 380
+    },
+    "needs_review": false,
+    "reason": "对应Page 02代表作品 1）鹿野苑石刻艺术博物馆（传统园林布局、缝隙采光与风景）"
+  },
+  {
+    "card_id": 6,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-02.jpg",
+    "card_front": "胡慧姗纪念馆如何体现人文关怀？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 860,
+      "width": 1630,
+      "height": 380
+    },
+    "needs_review": false,
+    "reason": "对应Page 02代表作品 2）胡慧姗纪念馆（救灾帐篷原型、粉色内部与圆形天窗的人文关怀）"
+  },
+  {
+    "card_id": 7,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-02.jpg",
+    "card_front": "西村·贝森大院如何体现社区意识？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 1240,
+      "width": 1630,
+      "height": 380
+    },
+    "needs_review": false,
+    "reason": "对应Page 02代表作品 3）西村·贝森大院（整合多元功能、本土生活集群激发社区活力）"
+  },
+  {
+    "card_id": 8,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-02.jpg",
+    "card_front": "水井街酒坊遗址博物馆如何保护历史街区？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 1620,
+      "width": 1630,
+      "height": 380
+    },
+    "needs_review": false,
+    "reason": "对应Page 02代表作品 4）水井街酒坊遗址博物馆（民居尺度聚合小体量缝合历史肌理）"
+  },
+  {
+    "card_id": 9,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-03.jpg",
+    "card_front": "山本理显的建筑思想有哪些关键词？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 100,
+      "width": 1630,
+      "height": 420
+    },
+    "needs_review": false,
+    "reason": "对应Page 03顶部 (2) 建筑思想理念：现代主义简约、社区公共空间邻里交往、开放空间景观互动、模块化清晰结构"
+  },
+  {
+    "card_id": 10,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-03.jpg",
+    "card_front": "天津文化中心图书馆体现山本理显哪些设计特征？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 520,
+      "width": 1630,
+      "height": 450
+    },
+    "needs_review": false,
+    "reason": "对应Page 03代表作品 1）天津文化中心图书馆（简洁立方体减法设计、模块化结构与中厅开放阅览空间）"
+  },
+  {
+    "card_id": 11,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-03.jpg",
+    "card_front": "山本理显如何通过空间促进邻里交流？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 970,
+      "width": 1630,
+      "height": 500
+    },
+    "needs_review": false,
+    "reason": "对应Page 03代表作品 2）横须贺美术馆及住宅聚落模式（室外露台、开放式室内空间与邻里交往）"
+  },
+  {
+    "card_id": 12,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-04.jpg",
+    "card_front": "大卫·奇普菲尔德的建筑思想有哪些关键词？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 100,
+      "width": 1630,
+      "height": 380
+    },
+    "needs_review": false,
+    "reason": "对应Page 04顶部奇普菲尔德思想理念：简洁几何素色主义、尊重历史抽象转译、功能场所出发"
+  },
+  {
+    "card_id": 13,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-04.jpg",
+    "card_front": "奇普菲尔德如何处理旧建筑改造？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 480,
+      "width": 1630,
+      "height": 420
+    },
+    "needs_review": false,
+    "reason": "对应Page 04奇普菲尔德新旧建筑延续与柏林新博物馆改造设计分析"
+  },
+  {
+    "card_id": 14,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-04.jpg",
+    "card_front": "詹姆斯·西蒙美术馆体现了哪些设计策略？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 900,
+      "width": 1630,
+      "height": 420
+    },
+    "needs_review": false,
+    "reason": "对应Page 04詹姆斯·西蒙美术馆（古典柱廊转译、石材混凝土新旧延续）"
+  },
+  {
+    "card_id": 15,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-04.jpg",
+    "card_front": "凯雷的建筑思想有哪些关键词？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 1420,
+      "width": 1630,
+      "height": 380
+    },
+    "needs_review": false,
+    "reason": "对应Page 04下半部凯雷思想理念：改善社区社会责任、回应极端气候、本土廉价材料、因地制宜公众参与"
+  },
+  {
+    "card_id": 16,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-04.jpg",
+    "card_front": "甘多小学采用了哪些生态和社区策略？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 1800,
+      "width": 1630,
+      "height": 400
+    },
+    "needs_review": false,
+    "reason": "对应Page 04甘多小学（水泥强化黏土砌块、双层屋顶天窗通风、社区参与职业培训）"
+  },
+  {
+    "card_id": 17,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-04.jpg",
+    "card_front": "狮子初创园如何适应热带气候？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 2200,
+      "width": 1630,
+      "height": 300
+    },
+    "needs_review": false,
+    "reason": "对应Page 04狮子初创园（高耸通风塔烟囱效应、遮阳设施、当地石材坡地布局）"
+  },
+  {
+    "card_id": 18,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-04.jpg",
+    "card_front": "凯雷建筑中公众参与的意义是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 320,
+      "y": 1650,
+      "width": 1630,
+      "height": 250
+    },
+    "needs_review": false,
+    "reason": "对应Page 04凯雷理念5）：向村民传授建筑建造知识，使社区掌握技能形成长期维护能力"
+  },
+  {
+    "card_id": 19,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-05.jpg",
+    "card_front": "拉卡顿与瓦萨尔的建筑理念是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 300,
+      "y": 80,
+      "width": 1650,
+      "height": 600
+    },
+    "needs_review": false,
+    "reason": "对应Page 05: 2021-拉卡顿与瓦萨尔（社会责任、人文关怀、城市更新、既有住宅改善）"
+  },
+  {
+    "card_id": 20,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-05.jpg",
+    "card_front": "2020年格拉夫顿建筑事务所的设计理念是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 300,
+      "y": 680,
+      "width": 1650,
+      "height": 470
+    },
+    "needs_review": false,
+    "reason": "对应Page 05: 2020-伊冯、雪莉（创新空间光的结合、场所精神、人文关怀、精细化设计）"
+  },
+  {
+    "card_id": 21,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-05.jpg",
+    "card_front": "矶崎新的建筑思想有哪些？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 300,
+      "y": 1150,
+      "width": 1650,
+      "height": 500
+    },
+    "needs_review": false,
+    "reason": "对应Page 05: 2019-矶崎新（空中城市、建筑精神属性、形式自主性、建筑时代性）"
+  },
+  {
+    "card_id": 22,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-05.jpg",
+    "card_front": "多西的建筑思想有哪些？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 300,
+      "y": 1650,
+      "width": 1650,
+      "height": 400
+    },
+    "needs_review": false,
+    "reason": "对应Page 05: 2018-B.V.多西（场所精神、现代性-地域性、经济性、生态策略）"
+  },
+  {
+    "card_id": 23,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-05.jpg",
+    "card_front": "RCR建筑事务所的理念有哪些？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 300,
+      "y": 2050,
+      "width": 1650,
+      "height": 400
+    },
+    "needs_review": false,
+    "reason": "对应Page 05: 2017-RCR（场所精神、简约风格、生态策略、更新改造与废弃材料利用）"
+  },
+  {
+    "card_id": 24,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-05.jpg",
+    "card_front": "阿拉维纳的建筑思想有哪些？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 300,
+      "y": 2450,
+      "width": 1650,
+      "height": 370
+    },
+    "needs_review": false,
+    "reason": "对应Page 05: 2016-阿拉维纳（社会责任、人文关怀、经济性、场所精神、半成品社会住宅）"
+  },
+  {
+    "card_id": 25,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-06.jpg",
+    "card_front": "弗雷·奥托的建筑思想和结构特点是什么？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 300,
+      "y": 80,
+      "width": 1650,
+      "height": 440
+    },
+    "needs_review": false,
+    "reason": "对应Page 06: 2015-弗雷·奥托（轻质空间结构、张力结构、结构本体与建构关注）"
+  },
+  {
+    "card_id": 26,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-06.jpg",
+    "card_front": "坂茂的建筑思想有哪些？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 300,
+      "y": 520,
+      "width": 1650,
+      "height": 360
+    },
+    "needs_review": false,
+    "reason": "对应Page 06: 2014-坂茂（社会责任、人文关怀、生态可持续、纸管建筑）"
+  },
+  {
+    "card_id": 27,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-06.jpg",
+    "card_front": "伊东丰雄的建筑思想有哪些？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 300,
+      "y": 880,
+      "width": 1650,
+      "height": 370
+    },
+    "needs_review": false,
+    "reason": "对应Page 06: 2013-伊东丰雄（反建筑与新陈代谢、轻质抗震、开放空间消解墙体）"
+  },
+  {
+    "card_id": 28,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-06.jpg",
+    "card_front": "王澍的建筑思想有哪些？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 300,
+      "y": 1250,
+      "width": 1650,
+      "height": 400
+    },
+    "needs_review": false,
+    "reason": "对应Page 06: 2012-王澍（新乡土建筑、自然观、场所精神、传统材料技法瓦片墙）"
+  },
+  {
+    "card_id": 29,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-06.jpg",
+    "card_front": "苏托·德·莫拉的建筑思想有哪些？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 300,
+      "y": 1650,
+      "width": 1650,
+      "height": 400
+    },
+    "needs_review": false,
+    "reason": "对应Page 06: 2011-德·穆拉（场所精神、简约风格、表皮关注、建构事实）"
+  },
+  {
+    "card_id": 30,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-06.jpg",
+    "card_front": "SANAA的建筑思想有哪些？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 300,
+      "y": 2050,
+      "width": 1650,
+      "height": 400
+    },
+    "needs_review": false,
+    "reason": "对应Page 06: 2010-妹岛和世、西泽立卫（简约风格、建筑时代性、开放空间）"
+  },
+  {
+    "card_id": 31,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": "秋季-理论专题-13-【普利兹克奖得主思想-作品-06.jpg",
+    "card_front": "卒姆托的建筑思想有哪些？",
+    "match_confidence": 0.98,
+    "crop": {
+      "x": 300,
+      "y": 2450,
+      "width": 1650,
+      "height": 370
+    },
+    "needs_review": false,
+    "reason": "对应Page 06: 2009-彼得·卒姆托（简约风格、表皮关注、场所精神、建构事实与材料体验）"
+  },
+  {
+    "card_id": 32,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": null,
+    "card_front": "不同普奖建筑师如何共同体现“场所精神”？",
+    "match_confidence": 0.5,
+    "crop": null,
+    "needs_review": true,
+    "reason": "跨大师宏观横向对比总结题，原脑图按单人展开无独立综合图示，依严格审计标准标记为需复核与空裁剪"
+  },
+  {
+    "card_id": 33,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": null,
+    "card_front": "普奖建筑师作品中“人文关怀”主要表现在哪些方面？",
+    "match_confidence": 0.5,
+    "crop": null,
+    "needs_review": true,
+    "reason": "跨大师宏观横向对比总结题，原脑图按单人展开无独立综合图示，依严格审计标准标记为需复核与空裁剪"
+  },
+  {
+    "card_id": 34,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": null,
+    "card_front": "普奖建筑师作品中的生态策略有哪些共同做法？",
+    "match_confidence": 0.5,
+    "crop": null,
+    "needs_review": true,
+    "reason": "跨大师宏观横向对比总结题，原脑图按单人展开无独立综合图示，依严格审计标准标记为需复核与空裁剪"
+  },
+  {
+    "card_id": 35,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": null,
+    "card_front": "普奖建筑师如何处理现代性与地域性的关系？",
+    "match_confidence": 0.5,
+    "crop": null,
+    "needs_review": true,
+    "reason": "跨大师宏观横向对比总结题，原脑图按单人展开无独立综合图示，依严格审计标准标记为需复核与空裁剪"
+  },
+  {
+    "card_id": 36,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": null,
+    "card_front": "如何比较刘家琨和凯雷的建筑实践？",
+    "match_confidence": 0.5,
+    "crop": null,
+    "needs_review": true,
+    "reason": "双大师对比分析题（刘家琨在Page 02，凯雷在Page 04），脑图无并列横向对比框，标记为需复核与空裁剪"
+  },
+  {
+    "card_id": 37,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": null,
+    "card_front": "如何比较山本理显和奇普菲尔德的建筑语言？",
+    "match_confidence": 0.5,
+    "crop": null,
+    "needs_review": true,
+    "reason": "双大师对比分析题（山本理显在Page 03，奇普菲尔德在Page 04），脑图无并列横向对比框，标记为需复核与空裁剪"
+  },
+  {
+    "card_id": 38,
+    "subject": "建筑理论专题",
+    "source_file": "13-普利兹克奖得主思想-作品解读.md",
+    "page_file": null,
+    "card_front": "如何用“功能—形式—技术—场所—社会”分析普奖作品？",
+    "match_confidence": 0.5,
+    "crop": null,
+    "needs_review": true,
+    "reason": "普奖全案五维理论分析方法题，原脑图无直接对应独立框，标记为需复核与空裁剪"
+  }
+]
