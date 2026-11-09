@@ -180,7 +180,7 @@ const savedCards = JSON.parse(localStorage.getItem('arch-cards') || '[]');
 const savedImported = JSON.parse(localStorage.getItem('arch-imported') || 'null');
 // 内置题库数据版本：解析器（_parse_cleaner.js）重新生成 SAMPLE_CARDS 后必须同步升级此值，
 // 浏览器才会丢弃旧缓存并载入新题库。
-const DATA_VERSION = '2.17';
+const DATA_VERSION = '2.18';
 // 本次页面加载是否已用内置题库重建过卡片。存在的原因：
 // state.cards 重建时会把 localStorage 的 arch-version 立刻写成 DATA_VERSION，
 // 而 IndexedDB 里可能仍是旧卡片；hydrate() 若只比对版本号就会命中旧数据，
