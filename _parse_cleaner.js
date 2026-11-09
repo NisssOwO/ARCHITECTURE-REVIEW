@@ -28,11 +28,13 @@ const GENERIC_HEADING = /^(特征|类型|要点|分析|组成|优缺点|设计�
 
 function cleanTitle(str) {
   if (!str) return '';
+  // 题头常见形态是「**（1）** 有机材料」或「==**（1）** 有机材料**==」；
+  // 先移除成对装饰，避免装饰残留在标题中间（如“** 有机材料”）。
+  str = String(str).replace(/==|\*\*/g, '').trim();
   str = str.replace(/^[0-9①②③④⑤⑥⑦⑧⑨⑩一二三四五六七八九十]+[、.）)）]*/g, '');
   if (!str) return '';
   return str
-    .replace(/^==\*\*|\*\*==$/g, '')
-    .replace(/^\*\*|\*\*$/g, '')
+    .replace(/==|\*\*/g, '')
     .replace(/^[#\s]+/, '')
     .replace(/^[【(（]?([0-9]+|[一二三四五六七八九十]+|[①②③④⑤⑥⑦⑧⑨⑩]+)[)）】、.]\s*/, '')
     .replace(/^([0-9]+|[一二三四五六七八九十]+)[、.]\s*/, '')
@@ -81,7 +83,8 @@ function subjectFromPath(p) {
 function chapterFromPath(p) {
   const base = path.basename(p, '.md');
   const m = base.match(/^(\d+)/);
-  return m ? m[1] : base;
+  // 统一 01 / 1，保证与 CHAPTER_TITLES 的键一致。
+  return m ? String(Number(m[1])) : base;
 }
 
 // 智能切分单篇 Markdown
