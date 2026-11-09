@@ -1,164 +1,129 @@
-# 筑忆：建筑理论复习网页交接文档（HANDOFF）
+# 筑忆（Architecture Review）项目交接文档（HANDOFF v3.0）
 
-## 1. 项目概述与技术约束
+## 1. 项目概况与架构定位
 
-这是一个面向建筑学考研理论复习（中国建筑史、外国建筑史、外国近现代建筑史、公共建筑设计原理）的**纯静态离线学习网页**，原始 Markdown 资料位于：
+「筑忆」是一个专为建筑学考研（中国建筑史、外国建筑史、外国近现代建筑史、公共建筑设计原理、建筑理论专题）设计的**高性能纯静态、离线优先学习与记忆卡片系统**。
 
-```text
-F:\work\fuxi\zl
-```
-
-### 核心约束（不可违背）
-- **零构建依赖**：不依赖 npm、React、Vite、TypeScript 或开发服务器，直接双击或通过浏览器打开 `F:\work\architecture-review\index.html` 即可运行。
-- **深色沉浸式夜间界面**：采用深岩灰底色（`#0f1215` / `#13171b` / `#171c21`）、暖象牙白正文（`#f2ede4`）与赤陶色点缀（`#d4895c`），标题使用衬线体（`Songti SC` / `Noto Serif SC` / `Georgia`），正文使用无衬线体。
-- **重点层级只用字体表达（严禁背景色块高亮）**：
-  - `==**重点**==`（原思维导图红字核心重点）→ `.hl-red`：珊瑚红字色（`#eb7a6b`）+ 字重加粗 + 下划线，**不使用背景色块**。
-  - `**次重点**`（原思维导图黑粗/蓝粗次重点）→ `.hl-bold`：高亮暖白加粗文字，**不使用背景色块**。
-- **原始资料只读**：网页仅读取用户选择的 Markdown 文件并将解析结果保存在浏览器本地（`IndexedDB` + `localStorage`），绝不修改 `F:\work\fuxi\zl` 下的源文件。
+### 1.1 核心设计哲学与硬约束
+- **零构建与无依赖**：纯原生前端体系（Vanilla JS + 单文件 CSS + HTML），无 npm / React / Vue / Vite 等打包流程，双击 `index.html` 或通过静态托管（如 GitHub Pages）直接运行。
+- **离线与本地优先**：状态持久化基于浏览器 `IndexedDB`（主数据库 `architecture-review`）+ `localStorage`（配置及最后进度），断网无缝使用。
+- **视觉风格与规范**：深色沉浸式夜间界面（深岩灰底色 `#0f1215` / `#13171b`、暖象牙白正文 `#f2ede4`、赤陶重点色 `#d4895c`）。严格遵循“纯字体表现”原则，**严禁背景色块高亮**；按最新用户交互规范，卡片正文不使用红字干扰阅读，重点通过字重粗体（`.hl-bold`）、下划线（`.hl-underline`）以及卡片角标统一体现。
+- **全量题库内置化**：不再依赖用户手动选择导入本地 Markdown 文件，系统已将全部 60 篇专业考研核心笔记（共 **1542** 条精选考点）编译内置于 `app.js` 中。
 
 ---
 
-## 2. 当前目录与文件状态
+## 2. 仓库与文件架构
+
+- **远程仓库**：`https://github.com/NisssOwO/ARCHITECTURE-REVIEW`
+- **线上部署**：GitHub Pages（主分支 `main`，根目录部署）
+- **本地工作区**：`F:\work\architecture-review\`
 
 ```text
 F:\work\architecture-review\
-├── index.html              [已完成优化] 页面骨架、侧边栏徽章、桌面/移动端双搜索栏、双模式文件导入器
-├── style.css               [已完成重构] 清理重复覆盖样式，统一设计变量、卡片固定视口布局与响应式适配
-├── app.js                  [待同步更新] 页面渲染逻辑、Markdown 解析、卡片复习与本地存储（需对接新 DOM 与样式）
-├── README.md               使用说明
-├── TODO.md                 分阶段任务清单
-├── HANDOFF.md              本交接文档
-├── material-audit.md       资料审计报告（4 门科目共 43 个 .md 文件）
-├── material-manifest.json  资料清单 JSON
-└── material-manifest.csv   资料清单 CSV
+├── index.html              // 页面骨架、语义化布局、侧边栏/顶栏/移动端抽屉
+├── style.css               // 全量样式体系（含桌面固定视口、移动端响应式、专注模式、字体规范）
+├── app.js                  // 单文件前端核心应用引擎（内置题库、状态机、视图渲染、事件调度）
+├── all-cards.json          // 全量清洗编译后的 1542 条卡片题库数据源
+├── _parse_cleaner.js       // 智能 Markdown 语法切分与题库生成编译脚本
+├── HANDOFF.md              // 本交接文档
+└── DSH_OCR_HANDOFF.md      // 早期 OCR 诊断记录
 ```
 
 ---
 
-## 3. 接手诊断：原网页存在的核心问题清单
+## 3. 核心功能与模块实现
 
-在对原始 `index.html`、`style.css` 和 `app.js` 进行全面代码审查后，定位出以下 4 大类问题：
+### 3.1 视图体系（五大核心页面）
+1. **仪表盘（Dashboard）**：真实计算全库卡片总数、今日待复习数、掌握率（复习评分为 2/3 的卡片）、连续学习天数、分科目环形/条形进度，以及最近动态记录。
+2. **资料全览（Materials）**：科目/章节多维度筛选、即时防抖模糊全文搜索、完整格式化考点内容展开阅读，支持一键单卡跳转至复习。
+3. **卡片复习（Cards / cardsV2）**：
+   - **双模式切换**：支持「浏览模式」（直接展示答案）与「复习模式」（隐藏答案，点击或空格翻开，提供 4 档间隔评分：当天重来 / 1天 / 3天 / 7天）。
+   - **双栏与目录联动**：左侧单卡视口固定高度滚动，右侧完整章节知识点目录（`.card-directory`），切卡时自动平滑居中滚动定位（`scrollDirectoryIntoView`）。
+   - **专注模式（Zen/Focus Mode）**：按快捷键 `F` 或点击顶部按钮即可隐藏辅助信息与导航，留出高行高、大字体、居中的纯粹阅读区域。
+   - **智能章节衔接**：支持上一章/下一章直接切换；单卡翻页到当前章节末尾时，可根据科目章节序列自动无缝跳转到下一章首题。
+4. **错题与收藏（Mistakes）**：分栏独立呈现“已收藏卡片”与“复习标记为遗忘/困难（Status: learning）”的卡片，便于集中攻克。
+5. **设置中心（Settings）**：支持导出 Anki 兼容 TSV、JSON 全量数据备份与导入恢复、题库重置与缓存清空。
 
-### 3.1 UI 样式与布局层问题（已在 `index.html` 和 `style.css` 中修复）
-1. **`style.css` 存在大量重复定义与尾部压缩覆盖**：原文件后半段追加了数段单行压缩 CSS，导致 `.material-row`、`.card-study-layout`、`.review-card`、`.card-directory` 等选择器被反复覆盖，维护困难且部分属性冲突。
-2. **类名大小写拼写不一致**：原 `app.js` 混用了 `.subject-right` 与 `.subject-Right`，导致部分样式未命中。
-3. **搜索栏与移动端导航体验割裂**：
-   - 原顶栏只有“搜索”按钮，点击后才展开整行搜索框，桌面端空间未利用且输入体验多一步；
-   - 移动端抽屉菜单打开后缺少半透明遮罩层（`#sidebar-backdrop`），点击正文区域无法收起侧边栏。
-4. **移动端无法导入单文件**：原 `index.html` 仅提供带 `webkitdirectory` 的 `#folder-input`，在手机浏览器或只需导入单个 `.md` 文件时无法选择文件。
-
-### 3.2 页面交互与状态死胡同问题（需在 `app.js` 中完成修复）
-1. **复习卡片页（`cardsV2`）筛选为空时直接丢失筛选器（严重死胡同）**：
-   - 原代码：`if (!deck.length) { content.innerHTML = '<div class="empty">当前范围没有可复习卡片。</div>'; return; }`
-   - 后果：一旦用户选择的“科目 / 章节 / 收藏 / 重点”组合下没有卡片，整个页面的顶部标题、模式切换标签（浏览/复习）、范围下拉框全部被清空，用户无法切回其他范围，只能刷新或切走页面。
-2. **“加入卡片 / 加入复习”按钮（`addReview(id)`）忽略了传入的 `id`**：
-   - 原代码：`function addReview() { state.view = 'cards'; state.cardMode = 'review'; state.cardFilter = 'all'; state.cardIndex = 0; ... }`
-   - 后果：用户在“资料浏览”或“错题与收藏”点击某条具体知识点的“加入卡片”时，永远只会跳到第 1 张卡片（`cardIndex = 0`），而不会定位到所点击的那张卡片。
-3. **卡片目录硬编码 `.slice(0, 30)` 截断**：
-   - 原代码在渲染右侧卡片目录时写了 `deck.slice(0, 30)`，当某科目或全部卡片超过 30 张时，第 31 张及之后的卡片在目录中完全不可见。
-4. **复习打分后跳转索引计算错误（`rateCard`）**：
-   - 原代码：`rate(id, rating); state.cardIndex = (state.cardIndex + 1) % Math.max(allCards().length, 1); render();`
-   - 后果：`rate()` 内部已经调用了一次 `render()`，`rateCard()` 又用 `allCards().length`（而非当前筛选后的 `deck.length`）取模并再次 `render()`，导致重复渲染和卡片越界跳变。
-
-### 3.3 数据展示失真与解析截断问题（需在 `app.js` 中完成修复）
-1. **总览页（`dashboard`）存在多处写死（Hardcoded）的假数据**：
-   - 日期固定写死为 `MONDAY · 08 NOV 2026`；
-   - 统计卡片写死 `连续学习 6 天`、`已掌握卡片 86 + ...`、`本周学习时长 3.8h`；
-   - 科目进度条使用 `SUBJECTS` 静态常量中的 `progress: 42%` 等固定值，未随导入资料与实际复习进度变化；
-   - 右侧“最近复习”列表写死了 3 条固定假数据（“庭院的作用 · 2小时前”等），未绑定真实的待复习/最近复习记录。
-2. **Markdown 导入存在两处静默截断**：
-   - `parseMarkdown(file, text)` 末尾写了 `return cards.slice(0, 80)`，单文件超过 80 个知识点会被静默丢弃；
-   - `materialRowHTML(k)` 中写了 `k.body.slice(0, 130)`，导致资料浏览页无法阅读完整知识点内容，且丢失了内联重点标记。
-3. **冗余废弃函数残留**：
-   - `app.js` 中仍留有早期版本的 `review()` 和 `cards()` 函数，与当前实际使用的 `cardsV2()` 重复且未清理。
+### 3.2 键盘快捷键体系（无输入焦点时）
+- `ArrowLeft` / `A`：上一张卡片
+- `ArrowRight` / `D`：下一张卡片
+- `Space` / `Enter`：翻开答案（复习模式）
+- `1` / `2` / `3` / `4`：复习模式下快捷评分
+- `F`：切换专注模式（Focus Mode）
+- `Esc`：关闭侧边栏抽屉与所有弹窗
 
 ---
 
-## 4. 已完成的优化工作（第 1 阶段）
+## 4. 关键技术突破与重大 Bug 修复记录
 
-### 4.1 `F:\work\architecture-review\index.html`（已更新并验证）
-- **侧边栏升级**：
-  - 增加导航分组标题 `学习空间`；
-  - 为导航项增加实时数量徽章：`#nav-materials-count`（资料总数）、`#nav-due-count`（待复习数）、`#nav-fav-count`（错题与收藏数）；
-  - 底部新增本地资料库状态卡片 `#sidebar-import-status`，实时显示已导入文件数与卡片数；
-  - 新增移动端抽屉遮罩层 `<div class="sidebar-backdrop" id="sidebar-backdrop"></div>`。
-- **顶栏与搜索栏升级**：
-  - 桌面端顶栏内嵌常驻搜索框（`#search-input` + `#clear-search`），支持快捷键 `/` 聚焦；
-  - 移动端保留折叠式搜索按钮 `#search-toggle` 与独立展开行 `#search-row`（`#mobile-search-input` + `#mobile-clear-search`）；
-  - 顶栏右侧增加快捷按钮 `＋ 导入资料`（`#quick-import-btn`）。
-- **双模式文件选择器**：
-  - 保留文件夹导入 `#folder-input`（`webkitdirectory multiple`）；
-  - 新增多文件导入 `#files-input`（`accept=".md,text/markdown,text/plain" multiple`），兼容移动端与单文件导入。
+### 4.1 Markdown 解析器重构与错位/空白题根除（`_parse_cleaner.js`）
+- **原问题**：
+  1. 旧版基于朴素正则切分，将内容中的嵌套子编号（如 `①优点：...`、`②缺点：...`）误当成新卡片，导致正文沦为纯分隔线 `---` 或空白。
+  2. 单行混合考点（如 `4）【生态性】高层建筑：【1】法兰克福商业银行大厦...`）被误当成纯标题行，后续内容被迫上移，导致题干与答案整体错位。
+- **解决方案**：
+  - 编写专用清洗提取脚本 `_parse_cleaner.js`：
+    - 精准判定“主考点标题行”与“考点补充子项”。
+    - 针对 `冒号` 结构进行语义判断，行内同时包含题干与正文时，将完整内容归入 Body，确保题干提炼精确。
+    - 将所有 `①②③`、`【1】【2】` 等子级要点强制收敛至主知识点正文中，绝不拆分孤立卡片。
+  - 全量扫描 60 篇原始笔记，实现 **Bad Body（空白正文）清零**，产出 1542 张合规高质量卡片并注入 `SAMPLE_CARDS`。
 
-### 4.2 `F:\work\architecture-review\style.css`（已重构并验证）
-- 彻底清理了原文件尾部所有重复、冲突的压缩 CSS；
-- 统一设计 Token（颜色、圆角、阴影、衬线/无衬线字体栈）；
-- 完善 `.hl-red`（珊瑚红加粗下划线）与 `.hl-bold`（亮象牙白加粗）纯字体强调样式，无任何背景色块；
-- 完善 `.toolbar-panel`、`.toolbar-row`、`.material-row`、`.material-meta-top`、`.material-row-actions` 资料浏览样式；
-- 完善 `body.cards-view` 桌面端单屏固定高度布局（左侧 `.swipe-card` 内部滚动答案、底部固定操作栏与四档评价按钮 `.rating.r-0` ~ `.rating.r-3`，右侧 `.card-directory` 独立滚动）；
-- 兼容 `.subject-right, .subject-Right` 选择器，完善 1080px 与 760px 两档响应式断点。
+### 4.2 浏览器持久化缓存穿透升级（Cache Versioning）
+- **原问题**：静态页面部署后，由于采用了 `IndexedDB` 离线存储，客户端浏览器会持续读取初次缓存的旧题库，导致用户即使强制刷新页面，依然显示老版本错位/空白题。
+- **解决方案**：
+  - 引入全局数据版本控制机制 `arch-version: 2.5`。
+  - 在 `app.js` 的 `hydrate()` 初始化生命周期中加入强版本校验：
+    ```javascript
+    const storedVer = localStorage.getItem('arch-version');
+    if (storedVer !== '2.5') {
+      // 自动迁移：保留用户自建的 custom 卡片与复习记录，强制使用最新的内置 SAMPLE_CARDS 重置并覆盖 IndexedDB 中的内置卡片
+      state.cards = [...SAMPLE_CARDS, ...customCards];
+      dbPut('cards', state.cards);
+      localStorage.setItem('arch-version', '2.5');
+    }
+    ```
+  - 用户只需刷新页面即可自动触发题库热升级，无需手动清空数据库。
 
----
+### 4.3 标签转义与下划线渲染修复
+- **原问题**：Markdown 正文中包含的原生 HTML 标签（如 `<u>重要概念</u>`）在经过 `escapeHtml` 处理后变成了 `&lt;u&gt;...&lt;/u&gt;`，在界面上直接露出了源代码字符。
+- **解决方案**：
+  - 重写 `formatBody(text)` 与 `formatTitle(text)` 渲染管道：转义安全字符串后，通过正则捕获 `&lt;u&gt;([\s\S]+?)&lt;/u&gt;` 并安全还原为语义化 HTML `<u class="hl-underline">$1</u>`。
+  - 在 `style.css` 中注入 `.hl-underline` 纯字体排版样式，保持视觉风格统一。
 
-## 5. 待完成工作清单（第 2 阶段：更新 `app.js`）
-
-接手后只需重写/更新 `F:\work\architecture-review\app.js`，即可完成全部 UI 与交互闭环。具体实现要求如下：
-
-### 5.1 全局导航与顶栏状态同步（`layout()` & `updateChrome()`）
-- 在每次 `layout()` / `render()` 时调用 `updateChrome()`：
-  - 更新 `#nav-materials-count` 为 `allCards().length`；
-  - 更新 `#nav-due-count` 为 `dueCards().length`；
-  - 更新 `#nav-fav-count` 为收藏与错题（`status === 'learning'`）去重后的数量；
-  - 更新 `#sidebar-import-status` 显示当前资料库状态（如已导入文件数/卡片数，或内置示例库状态）。
-- 绑定移动端侧边栏与遮罩层：
-  - 点击 `#mobile-menu` 同时切换 `#sidebar.open` 和 `#sidebar-backdrop.open`；
-  - 点击 `#sidebar-backdrop` 或任意 `.nav-item` 时关闭侧边栏与遮罩层。
-- 绑定顶栏与导入控件：
-  - `#quick-import-btn` 点击触发 `#folder-input.click()`；
-  - 桌面端 `#search-input` / `#clear-search` 与移动端 `#mobile-search-input` / `#mobile-clear-search` 双向同步 `state.search`；
-  - 抽取统一的 `handleImportFiles(fileList)` 函数，同时绑定到 `#folder-input` 和 `#files-input`。
-
-### 5.2 正文重点格式化辅助函数（`formatBody(text)`）
-- 在 `parseMarkdown` 中保留正文的 `==**...**==` 和 `**...**` 标记（或提供结构化渲染函数 `formatBody(text)`）：
-  - 将 `==**文本**==` 转为 `<span class="hl-red">文本</span>`；
-  - 将 `**文本**` 转为 `<strong class="hl-bold">文本</strong>`；
-  - 支持对 `①②③`、`1. 2. 3.`、`（1）（2）` 或换行列表进行清晰分段展示；
-  - 移除 `parseMarkdown` 末尾的 `.slice(0, 80)` 限制。
-
-### 5.3 五大视图 DOM 结构对齐（匹配新版 `style.css`）
-1. **总览视图 `dashboard()`**：
-   - `.eyebrow` 动态显示当前真实日期；
-   - `.stats` 展示 4 项真实统计：全部卡片（含重点卡数量）、待复习卡片、重点核心卡、已收藏/已复习卡片；
-   - 左侧“四门科目”列表：按各科目真实卡片数量、已复习比例计算动态进度条，使用 `.subject-row` > `.subject-dot` + `.subject-info` + `.subject-right`；
-   - 右侧“最近复习 / 待复习预览”：展示真实复习记录或高优先级待复习卡片，点击可直接跳转到对应卡片（`openCardById(id)`）。
-2. **资料浏览视图 `materials()`**：
-   - 顶部 `.view-head` 右侧 `.head-actions` 同时提供 `＋ 导入文件夹`（触发 `#folder-input`）和 `选择 .md 文件`（触发 `#files-input`）；
-   - 筛选面板使用 `.toolbar-panel` > `.toolbar-row`，包含科目筛选按钮（带各科目数量）、章节 `<select class="filter">`、以及重点层级筛选（全部 / 重点 / 次重点）；
-   - 列表项 `materialRowHTML(k)` 使用 `.material-row` > `.material-main`（含 `.material-meta-top` 标签行、`<h3 class="${k.level}">`、完整格式化正文 `<p>${formatBody(k.body)}</p>`）+ `.material-row-actions`（收藏按钮 + `卡片复习` 按钮）。
-3. **复习卡片视图 `cardsV2()`**：
-   - **空状态保护**：无论 `deck.length` 是否为 0，始终渲染顶部 `.view-head`（含 `.mode-tabs` 浏览/复习切换、新建卡片按钮）和 `.range-panel`（科目、章节下拉框及 `全部 / 重点 / 待复习 / 已收藏` 筛选按钮）。当 `deck.length === 0` 时，仅在下方卡片区渲染 `.empty` 面板并提供 `重置筛选范围` 按钮（`resetCardFilters()`）；
-   - **单卡复习区**：使用 `.review-card.single-card.swipe-card`，包含 `.card-meta`、`.question.${k.level}`、答案区（浏览模式或已翻开时显示 `.answer`，复习未翻开时显示 `.answer-reveal-box` 提示点击或按空格键显示）、`.card-footer-bar`（收藏/编辑/复制/删除/撤销，以及 `.swipe-controls` 上一张、进度条 `.swipe-progress-bar`、下一张）、以及复习模式下的四档评价按钮 `.rating.r-0` ~ `.rating.r-3`（附带间隔提示 `<small>当天重来 / 1 天后 / 3 天后 / 7 天后</small>`）；
-   - **右侧卡片目录**：移除 `.slice(0, 30)` 限制，完整渲染当前 `deck` 的所有 `.directory-item`，并在切换卡片时自动将当前选中项滚动至可视区域；
-   - **快捷键增强**：在 `cards` 视图下（且焦点不在输入框时），支持 `ArrowLeft` / `ArrowRight` 切换卡片、`Space` 显示答案、复习模式下数字键 `1`~`4` 快速打分。
-4. **错题与收藏视图 `mistakes()`**：
-   - 汇总展示用户已收藏（`state.favorites`）以及复习评价为“忘记/困难”（`card.status === 'learning'`）的卡片，支持子筛选（全部 / 仅收藏 / 仅错题），使用 `.knowledge-grid` 渲染。
-5. **设置视图 `settings()`**：
-   - 使用 `.setting-actions` 布局，提供“导入文件夹”、“选择 .md 文件”、“导出 Anki TSV”、“导出 JSON 备份”、“恢复 JSON 备份”和“清空本地数据”操作。
+### 4.4 移动端深度排版与交互体验
+- **优化**：在 680px 响应式断点下，对卡片题干的 `clamp()` 字号、行高及外边距进行重算，避免手机屏幕上小标题被折行打碎；精简答案区域 padding，大幅降低移动端空白率。
+- **侧边栏折叠**：桌面端支持收起扩展屏幕阅读宽度，移动端抽屉增加半透明磨砂遮罩与 ESC/点击即关机制。
 
 ---
 
-## 6. 验证步骤
+## 5. 维护与更新工作流
 
-完成 `app.js` 更新后，按以下步骤验证：
-
-1. **语法检查**：
+### 5.1 修改原始题库 / 新增 Markdown 资料
+若后续需要更新考点或新增科目笔记（文件存放在 `F:\work\fuxi\zl` 或其他目录）：
+1. 将新的 Markdown 文件规范命名并放入相应目录。
+2. 在项目根目录运行解析编译脚本：
    ```powershell
-   node --check F:\work\architecture-review\app.js
+   cd F:\work\architecture-review
+   node _parse_cleaner.js
    ```
-2. **功能与 UI 自检**：
-   - 打开 `F:\work\architecture-review\index.html`；
-   - 检查侧边栏 3 个数量徽章与底部资料库状态卡片是否正常显示；
-   - 检查顶栏搜索框输入与清空按钮、移动端窄屏下侧边栏抽屉与遮罩层收起是否正常；
-   - 在“资料浏览”测试导入 `F:\work\fuxi\zl` 文件夹或单个 `.md` 文件，确认重点（珊瑚红加粗下划线）与次重点（亮白加粗）无背景色块；
-   - 在“复习卡片”切换筛选条件至无结果状态，确认范围选择器依然保留且可一键重置；
-   - 点击任意知识点的“卡片复习”，确认能精准跳转到对应卡片。
+   *该脚本会自动扫描全部笔记、智能清洗、更新 `all-cards.json`，并自动将编译后的全量 JSON 数组替换注入到 `app.js` 的 `const SAMPLE_CARDS = [...]` 中。*
+3. **关键步骤**：如果更新了题库，请将 `app.js` 中的版本号常量（例如从 `2.5` 递增至 `2.6`）同步更新，以确保所有用户端能自动触发缓存刷新。
+
+### 5.2 语法校验与提交部署
+提交前务必进行语法检查：
+```powershell
+# 1. 语法检查
+node --check F:\work\architecture-review\app.js
+
+# 2. 提交并推送到 GitHub
+git add .
+git commit -m "feat/fix: 更新说明"
+git push origin main
+```
+推送至 GitHub 后，GitHub Pages 会在 1~2 分钟内自动完成线上更新。
+
+---
+
+## 6. 后续演进建议与待办备忘
+1. **题库导出增强**：当前 Anki 导出为基础 TSV，后续可扩展支持导出带 APKG 格式的卡片包。
+2. **知识点图谱**：未来可在 Materials 或 Dashboard 页面基于科目与章节层级，接入轻量级 Canvas 知识点导图。
+3. **跨设备进度同步**：当前基于本地 IndexedDB，若需要多端实时同步进度，可考虑接入 WebDAV（如坚果云）或轻量级云端同步端点。
