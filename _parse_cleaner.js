@@ -319,6 +319,10 @@ for (const [title, group] of titleGroups) {
     card.title = candidate;
     used.add(candidate);
   }
+  const remaining = group.filter(card => card.title === title);
+  if (remaining.length > 1) {
+    remaining.forEach((card, idx) => { card.title = `${title}（第${idx + 1}项）`; });
+  }
 }
 // 标题变化后重算 ID，确保导入和后续升级仍保持稳定。
 totalCards.forEach((card, index) => {
