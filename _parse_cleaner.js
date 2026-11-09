@@ -307,11 +307,14 @@ for (const [title, group] of titleGroups) {
   if (group.length < 2) continue;
   const used = new Set();
   for (const card of group) {
-    const named = firstMeaningfulSegment(card.body)
+    const bodyTail = String(card.body).split(/[：:]/).slice(1).join(':') || card.body;
+    const named = firstMeaningfulSegment(bodyTail)
       .replace(/^[（(【\[]?\d+[)）】\].、]?\s*/, '')
+      .replace(/^[①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮]\s*/, '')
       .trim();
-    if (!named || named.length < 2 || named.length > 18 || named === title) continue;
-    const candidate = `${title} · ${named}`;
+    if (!named || named.length < 2 || named === title) continue;
+    const shortName = named.length > 18 ? `${named.slice(0, 18)}…` : named;
+    const candidate = `${title} · ${shortName}`;
     if (used.has(candidate)) continue;
     card.title = candidate;
     used.add(candidate);
