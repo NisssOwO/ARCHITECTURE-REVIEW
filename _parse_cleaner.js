@@ -195,13 +195,14 @@ function parseMarkdownFile(fullPath) {
     const startsWithCircleNumber = /^[①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮]/.test(bareLine);
     const isSubBullet = /^[　\s]*\*{0,2}[①②③④⑤⑥⑦⑧⑨⑩a-eA-E][、.：:\s]/.test(line) || startsWithCircleNumber;
     const isSubNumbered = /^[　\s]*\*{0,2}[（(][\d①②③④⑤⑥⑦⑧⑨⑩]+[)）]/.test(line);
+    const isStandaloneEmphasis = /^(?:==)?\*\*[^*]+?\*\*(?:==)?$/.test(line);
 
     // 排除掉截图中的那种伪子项：如果这一行包含冒号，且冒号前的内容很短，它可能是题干，不应归为子项
     // 但圈号开头的行例外——「④艺术：理性、感性相结合」属于上一张卡的要点，不应独立成卡
     const isColonHeader = line.includes('：') || line.includes(':');
     const isShortHeader = isColonHeader && line.split(/[：:]/)[0].length < 15;
 
-    if ((isSubBullet || isSubNumbered) && (!isShortHeader || startsWithCircleNumber)) {
+    if ((isSubBullet || isSubNumbered) && !isStandaloneEmphasis && (!isShortHeader || startsWithCircleNumber)) {
       if (current) {
         current.body += (current.body ? '\n' : '') + line;
       }
